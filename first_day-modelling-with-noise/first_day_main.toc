@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Modeling with White Noise}{3}{0}{2}
+\beamer@sectionintoc {3}{Stochastic extensions}{4}{0}{3}
+\beamer@sectionintoc {4}{Brownian Motion}{5}{0}{4}
+\beamer@sectionintoc {5}{Poisson Process}{5}{0}{5}
+\beamer@sectionintoc {6}{Choosing a noise processes}{6}{0}{6}

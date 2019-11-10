@@ -1,45 +1,125 @@
 \documentclass[9pt]{beamer}
 \usepackage[sfdefault]{roboto}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{styles/fluxmacros}
 \usefolder{styles}
 \usetheme[style=asphalt]{flux}
-\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{color}
 \usepackage{colortbl}
-\usepackage{ragged2e}
-\usepackage{schemabloc}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{thumbpdf}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{url}
+\usepackage{empheq}
+\usepackage{fancybox}
+\usepackage{esint}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{tikz}%
+\usepackage{circuitikz}
+\usepackage{csvsimple}
+\usepackage{pgfplots}
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{proba}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{bibunits}
+\usepackage{tcolorbox}
+\usepackage[texcoord,
+            grid,
+            gridunit=mm,
+            gridcolor=red!60,
+            subgridcolor=black!60]{eso-pic}
+\usepackage{enumerate}
+\setbeamercovered{transparent}
+%--------------------------------------------------------------------------
+\definecolor{shadecolor}{cmyk}{0,0,0.41,0}
+\definecolor{light-blue}{cmyk}{0.25,0,0,0}
+\newsavebox{\mysaveboxM} % M for math
+\newsavebox{\mysaveboxT} % T for text
+\newcommand*\Garybox[2][Example]{%
+    \sbox{\mysaveboxM}{#2}%
+    \sbox{\mysaveboxT}{\fcolorbox{black}{light-blue}{#1}}%
+    \sbox{\mysaveboxM}{%
+        \parbox[b][\ht\mysaveboxM+.5\ht\mysaveboxT+.5\dp\mysaveboxT][b]{%
+            \wd\mysaveboxM}{#2}%
+    }%
+    \sbox{\mysaveboxM}{%
+        \fcolorbox{black}{shadecolor}{%
+            \makebox[\linewidth-10em]{\usebox{\mysaveboxM}}%
+        }%
+    }%
+    \usebox{\mysaveboxM}%
+    \makebox[0pt][r]{%
+        \makebox[\wd\mysaveboxM][c]{%
+            \raisebox{\ht\mysaveboxM-0.5\ht\mysaveboxT
+                +0.5\dp\mysaveboxT-0.5\fboxrule}{\usebox{\mysaveboxT}}%
+        }%
+    }%
+}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Informations
-\title{Modeling and Simulation with SDES}
+\pgfplotstableread[col sep = comma]{./IMAGENES/INTRODUCCION/gbm.csv}\mydata
+\usepackage[makeroom]{cancel}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+\mode<presentation>
+{  
+    %\usetheme{PaloAlto}
+    %\usecolortheme[named=kugreen]{structure}
+    \useinnertheme{progressbar}
+    %\usefonttheme{default}
+    %\usefonttheme{serif}
+    %\setbeamercovered{transparent}
+    %\setbeamertemplate{blocks}[rounded][shadow=true]
+    %s\setbeamertemplate{navigation symbols}[only frame symbol]
+}
+   %
+%
+\title{MODELADO CON EDEs EN BIOLOGÍA\\
+    Formulación, Análisis y Simulación Numérica.}
 \subtitle{First day: modeling with SDEs in biology}
 \author{Saúl Díaz Infante Velasco}
 \institute{CONACYT-UNIVERSIDAD de SONORA, Cimat, Guanajuato Gto}
 \date{\today}
 \titlegraphic{assets/background_image.png}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+\defaultbibliography{first_day_main}
+\defaultbibliographystyle{abbrv}
 \begin{document}
     \titlepage
-        \begin{frame}
+    \section{Introduction}
+        \include{Introduction/model_pertrubation}
+    \begin{frame}
         \frametitle{Table of contents}
         \tableofcontents
     \end{frame}
-    \section{Introduction}
-    \section{Modeling with White Noise}
-        \begin{frame}{Why noise?}
-        \end{frame}
-
-    \section{Stochastic extensions}
-        \begin{frame}{Stochastic extensions}
-        \end{frame}
+    \section{Discrete Time Markov Chains (DTMC)}
+        \input{ModelinWithNoise/noise_effects}
+        \input{ModelinWithNoise/stochastic_modeling_alternatives}
+        \input{ModelinWithNoise/dtmc}
+%
+%
+        
+    \section{Continuous Time Markov Chains (CTMC}
+        \input{ModelinWithNoise/ctmc}
     \section{Brownian Motion}
     
     \section{Poisson Process}
-    \begin{frame}{Continuous Markov Chains}
-        \end{frame}
     \section{Choosing a noise processes}
         \begin{frame}{Stochastic Processes in Biology}
         

@@ -1,0 +1,44 @@
+\begin{frame}
+	\frametitle{¿Por qué incorporar incertidumbre a un modelo?}
+	\begin{textblock*}{37mm}(3mm, 10mm)
+		\begin{block}{Efectos Ambientales}
+			\begin{itemize}
+				\item \textcolor<2-3>{orange}{Extinción}
+				\item \textcolor<4>{orange}{Epidemias}
+			\end{itemize}
+		\end{block}
+	\end{textblock*}
+	\begin{textblock*}{75mm}(45mm, 10mm)
+		\begin{alertblock}{%
+				\only<2>{%
+					Ruido ambiental suprime extinción%
+				}%
+				\only<3>{%
+					Color (correlación) induce extinción
+				}%
+				\only<4>{%
+					$\mathcal{R}_0$: endémico g.a.e $\to$ osc. per 
+					%$\mathcal{R}_0$ (determinista)
+				}%
+		}%Block titles
+			\only<2>{
+				\begin{bibunit}[apalike]
+					\nocite{Mao2002}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<3>{
+				\begin{bibunit}[apalike]
+					\nocite{Ripa1996}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<4>{
+				\begin{bibunit}[apalike]
+					\nocite{Allen2013}
+					\putbib
+			  \end{bibunit}
+			}
+		 \end{alertblock}
+	\end{textblock*}
+\end{frame}

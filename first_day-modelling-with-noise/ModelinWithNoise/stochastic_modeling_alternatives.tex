@@ -1,0 +1,68 @@
+\begin{frame}
+    \frametitle{Alternativas}
+    \begin{textblock*}{37mm}(3mm, 50mm)
+        \begin{block}{Environmental effects}
+            \begin{itemize}
+                \item Extinction
+                \item Outbreaks
+            \end{itemize}
+        \end{block}
+    \end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{textblock*}{37mm}(3mm, 35mm)
+        \begin{block}{In Biology}
+            \begin{itemize}
+                \item<1> \textcolor<1>{orange}{\textbf{DTMC, CTMC}}
+                \item<2-3>\textcolor<2-3>{orange}{
+                    \textbf<2-3>{%
+                        Stochastic perturbation of parameters
+                    }
+                }
+                \item<4> \textcolor<4>{orange}{Mean reverting processes}
+            \end{itemize}
+        \end{block}
+    \end{textblock*}
+%%%%%%%
+    \begin{textblock*}{65mm}(55mm, 35mm)
+        \begin{alertblock}{%
+                \only<1>{%
+                    $\mathbf{DTMC}+\mathbf{CTMC}+\mathbf{ME} \to SDE$%
+                }%
+                \only<2>{%
+                    $\varphi dt \rightsquigarrow \varphi dt + \sigma dB_t$%
+                }%
+                \only<3>{%
+                    $\varphi dt \rightsquigarrow \varphi dt + F(x)dB_t$%
+                }%
+                \only<4>{%
+                    $d \varphi_t = (\varphi_e -\varphi_t)dt + \sigma_\varphi 
+                    dBt$ %
+                }%
+            }%Block titles
+            \only<1>{
+                \begin{bibunit}[apalike]
+                    \nocite{Allen2017}
+                    \putbib
+            \end{bibunit}
+            }
+            \only<2>{
+                \begin{bibunit}[apalike]
+                    \nocite{Gray2011}
+                    \putbib
+            \end{bibunit}
+            }
+            \only<3>{
+                \begin{bibunit}[apalike]
+                    \nocite{Schurz2015}
+                    \putbib
+                \end{bibunit}
+            }
+            \only<4>{
+                \begin{bibunit}[apalike]
+                    \nocite{Allen2016}
+                    \putbib
+                \end{bibunit}
+            }
+        \end{alertblock}
+    \end{textblock*}
+\end{frame}

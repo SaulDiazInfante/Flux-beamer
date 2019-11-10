@@ -1,0 +1,66 @@
+\begin{frame}
+	\frametitle{Alternativas}
+	\begin{textblock*}{37mm}(3mm, 10mm)
+		\begin{block}{Efectos Ambientales}
+			\begin{itemize}
+				\item Extinción
+				\item Epidemias
+			\end{itemize}
+		\end{block}
+	\end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{textblock*}{37mm}(3mm, 35mm)
+		\begin{block}{En biología}
+			\begin{itemize}
+				\item \textcolor<2>{orange}{CTMCs}
+				\item \textcolor<3-4>{orange}{Perturbación de parámetros}
+				\item \textcolor<5>{orange}{Mean reverting Processes}
+			\end{itemize}
+		\end{block}
+	\end{textblock*}
+	
+	\begin{textblock*}{75mm}(45mm, 35mm)
+		\begin{alertblock}{%
+				\only<2>{%
+					$\mathbf{MC}+\mathbf{ME}$ $\to$ $SDE$%
+				}%
+				\only<3>{%
+					$\varphi dt \rightsquigarrow \varphi dt+ \sigma dB_t$%
+				}%
+				\only<4>{%
+					$\varphi dt \rightsquigarrow \varphi dt+F(x)dB_t$%
+					%$\mathcal{R}_0$ (determinista)
+				}%
+				\only<5>{%
+					$d \varphi_t = (\varphi_e -\varphi_t)dt + \sigma_\varphi dBt$ %
+					%$\mathcal{R}_0$ (determinista)
+				}%
+		}%Block titles
+			\only<2>{
+				\begin{bibunit}[apalike]
+					\nocite{Allen2017}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<3>{
+				\begin{bibunit}[apalike]
+					\nocite{Gray2011}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<4>{
+				\begin{bibunit}[apalike]
+					\nocite{Schurz2015}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<5>{
+				\begin{bibunit}[apalike]
+					\nocite{Allen2016}
+					\putbib
+			  \end{bibunit}
+			}
+		 \end{alertblock}
+	\end{textblock*}
+\end{frame}
+

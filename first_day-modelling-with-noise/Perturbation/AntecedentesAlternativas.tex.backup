@@ -1,0 +1,48 @@
+\begin{frame}
+	\frametitle{¿Por que incorporar incertidumbre a un modelo?}
+	\begin{textblock*}{37mm}(5mm, 20mm)
+		\begin{block}{Efectos Ambientales}
+			\begin{itemize}
+				\item Extinción
+			\end{itemize}
+		\end{block}
+	\end{textblock*}
+	\begin{textblock*}{80mm}(45mm, 50mm)
+		\begin{block}{%
+				\only<2>{%
+					Ruido ambiental suprime extinción%
+				}%
+				\only<3>{%
+					Color del ruido (correlación) induce extinción
+				}%
+			}%Block titles
+			\only<2>{
+				\begin{bibunit}[alpha]
+					\nocite{Mao2002}
+					\putbib
+			  \end{bibunit}
+			}
+			\only<3>{
+				\begin{bibunit}[alpha]
+					\nocite{Ripa1996}
+					\putbib
+			  \end{bibunit}
+			}
+		 \end{block}
+	\end{textblock*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Alternativas}
+	\begin{textblock*}{40mm}(20mm,20mm)
+		\begin{itemize}
+			\item CTMCs
+			\item SDE
+		\end{itemize}
+	\end{textblock*}
+\end{frame}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{frame}
+	\frametitle{Antecedentes}
+%
+\end{frame}

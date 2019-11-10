@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+	%\frametitle{Comparación}
+	%\begin{textblock*}{.5\textwidth}(85mm, 20mm)
+	\begin{tikzpicture}[remember picture,overlay]
+	  \node[anchor=south west, inner sep=0pt] at (%
+		  current page.south west) {%
+    \movie[%
+	    height = .7\paperheight,%
+	    width = .78\textwidth,%
+	    %poster,%
+			showcontrols]{}{./Video/StoPLBRM.mp4}%
+      };
+	\end{tikzpicture}
+	%\end{textblock*}
+	\begin{textblock*}{.5\textwidth}(65mm, 20mm)
+			\includegraphics[width=\textwidth]{%
+				./IMAGES/ComparacionDeModelos/pfSilvia.png}
+	\end{textblock*}
+	%	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]{Retrato fase a tiempo corto (9 años)}
+	\includegraphics[width=\textwidth,keepaspectratio]{%
+		./IMAGES/LongShortTime/PhasePotrait3d(a).png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]{Retrato fase a tiempo largo (80--90 años)}
+	\includegraphics[width=\textwidth,keepaspectratio]{%
+		./IMAGES/LongShortTime/PhasePotrait3d(b).png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]{Trayectoria larga y  masa osea}
+	\includegraphics[width=\textwidth,keepaspectratio]{%
+		./IMAGES/LongShortTime/longPahtBoneMass.png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]{Momentos a tiempo largo}
+	\includegraphics[width=\textwidth,keepaspectratio]{%
+		./IMAGES/LongShortTime/shortTimeMoments.png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]{Momentos a tiempo largo}
+	\includegraphics[width=\textwidth,keepaspectratio]{%
+		./IMAGES/LongShortTime/longTimeMoments.png}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,222 @@
+\documentclass[9pt]{beamer}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{thumbpdf}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{url}
+\usepackage{empheq}
+\usepackage{fancybox}
+\usepackage{esint}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{tikz}%
+\usepackage{circuitikz}
+\usepackage{csvsimple}
+\usepackage{pgfplots}
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{proba}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{bibunits}
+\usepackage{tcolorbox}
+\usepackage[texcoord,
+            grid,
+            gridunit=mm,
+            gridcolor=red!60,
+            subgridcolor=black!60]{eso-pic}
+\usepackage{enumerate}
+\setbeamercovered{transparent}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{proba}
+\begin{document}
+%   
+    \begin{frame}{}
+        \begin{equation*}
+            p_{ji}(\Delta t):=
+                \begin{cases}
+                    \frac{\beta i (N - i)}{N} \Delta t,     
+                        & j = i + 1
+                    \\
+                    (b + \gamma) i \Delta t, 
+                        &   j = i - 1
+                    \\
+                    1 - \left [
+                            \frac{\beta i (N - i)}{N} +
+                            (b + \gamma) i %                
+                        \right] \Delta t, 
+                        & j=i
+                    \\
+                    0 & \text{otherwise}
+                \end{cases}
+        \end{equation*}
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{}
+        \begin{equation*}
+            \begin{pmatrix}
+                1   & d(1) \Delta t & 0 & \cdots    & 0 & 0
+                \\
+                0   & 1 - (b+d)(1) \Delta t     & d(2)  \Delta t    & \cdots    & 0 & 0 
+                \\
+                0   &   b(1) \Delta t   & 1 - (b+d)(2) \Delta t     & \cdots    & 0 & 0
+                \\
+                0   & 0 & b(2) \Delta t     & \cdots    & 0 & 0
+                \\
+                \vdots  & \vdots & \vdots   & \ddots    & \vdots    & \vdots
+                \\
+                0   & 0 & 0 & \cdots & d (N - 1) \Delta t   & 0
+                \\
+                0   & 0 & 0 & \cdots & 1- (b+d) (N - 1) \Delta t    & d(N) \Delta t
+                \\
+                0   & 0 & 0 & \cdots & d (N - 1) \Delta t   &  1 - d(N) \Delta t 
+            \end{pmatrix}
+        \end{equation*}
+    \end{frame}
+    %
+    \begin{frame}{}
+        \begin{align*}
+            \E(I_{t + \Delta t}) &=  
+                \sum_{i = 0} ^ N
+                    i p_i(t + \Delta t)
+            \\  
+                        &=
+                    \sum_{i = 0} ^ N
+                        i p_{i - 1} (t) b(i - 1) \Delta t
+                   + \sum_{i = 0} ^ {N-1}
+                        i p_{i + 1} (t) d(i + 1) \Delta t
+            \\
+                & + \sum_{i=0}^N i p_i(t) \Delta t
+                - \sum_{i=0}^N i p_i(t) b(i) \Delta t
+                - \sum_{i=0}^N i p_i(t) d(i) \Delta t
+            \\
+                \E(I_{t+ \Delta t}) 
+                &= 
+                    \E(I_t) 
+                        + \sum_{i = 1} ^ N
+                        p_{i-1} (t)
+                        \frac{\beta (i-1)(N - [i -1])}{N} \Delta t
+                        -\sum_{i = 0} ^ {N - 1}
+                        p_{i + 1} (t) (b + \gamma) (i+1) \Delta t
+            \\
+                &=
+                \E(I_t) + [\beta - (b + \gamma )] \Delta t \E(I_t)
+                -\frac{\beta}{N} \Delta t \underbrace{\E(I_t ^ 2)}_{\geq \E ^2(I_t)}
+            \end{align*}
+
+            \begin{equation*}
+                \frac{\E(I_{t + \Delta t}) - \E(I_t)}{\Delta t}
+                    \leq
+                        [\beta  - (b + \gamma)] \E (I_t)
+                        - \frac{\beta}{N} \E^2 (I_t)
+            \end{equation*}
+            %
+            \begin{align*}
+                \frac{d \E(I_{t})}{dt}
+                    & \leq
+                        [\beta  - (b + \gamma)] \E (I_t)
+                        - \frac{\beta}{N} \E ^ 2 (I_t)
+                \\
+                    & = \frac{\beta}{N} [N - \E(I_t)] \E (I_t)
+                        - (b + \gamma) \E (I_t)
+            \end{align*}        
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{Formulating a SIS-CTMC }
+        Let 
+        \begin{align*}
+            & \{ I_t\}_{t \geq 0},
+            \\
+            & p_i(t) = \probX{I_t = i}.
+        \end{align*}
+        Thus, the Markov porperty becomes in
+        \begin{align*}
+            \probCX{ I_{t_{n + 1}}}{I_{t_0}, \cdots, I_{t_n} }
+                &=
+                \probCX{ I_{t_{n + 1}}}{I_{t_n}}
+                \\
+                \text{for all } &
+                t_0 < t_1 < \cdots < t_n 
+        \end{align*}
+        \begin{align*}
+            &p_{ji}(\Delta t):=
+                \begin{cases}
+                    \frac{\beta i (N - i)}{N} \Delta t 
+                        + o(\Delta t),     
+                        & j = i + 1
+                    \\
+                    (b + \gamma) i \Delta t 
+                        + o(\Delta t),
+                        &   j = i - 1
+                    \\
+                    1 - \left [
+                            \frac{\beta i (N - i)}{N} +
+                            (b + \gamma) i %                
+                        \right] \Delta t
+                        + o(\Delta t) , 
+                        & j=i
+                    \\
+                    o(\Delta t) & \text{otherwise}
+                \end{cases}
+            \\
+            & \lim_{t\to \infty}
+                \frac{o(\Delta t)}{\Delta t}
+                = 0
+        \end{align*}
+    \end{frame}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{}
+        Using the notation for birth and death
+        processes, we have
+
+        \begin{equation*}
+            p_{ij}(\Delta t):=
+                \begin{cases}
+                    b(i) \Delta t + o(\Delta t),     
+                        & j = i + 1
+                    \\
+                    d(i) \Delta t + o(\Delta t), 
+                        &   j = i - 1
+                    \\
+                    1 - \left [
+                            b(i) + d(i) %                
+                        \right] \Delta t
+                        + o(\Delta t), 
+                        & j=i
+                    \\
+                    0 & \text{otherwise}
+                \end{cases}
+        \end{equation*}
+        Assuming $\probX{I_0 = i_0} = 1$, then
+        \begin{align*}
+            p_i(t + \Delta t)
+                =&
+                    p_{i - 1} (t) b(i -1) \Delta t
+                    \\
+                    & + 
+                        p_{i + 1} (t) d(i + 1) \Delta t
+                    \\
+                    & +
+                        p_{i} (t)[1 - (b(i) + d(i))] \Delta t
+                    + o(\Delta t)
+            \\
+            i &= 1, 2, \dots, N
+        \end{align*}
+    \end{frame}
+\end{document}

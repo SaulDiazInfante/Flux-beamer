@@ -1,0 +1,82 @@
+\begin{frame}
+	\frametitle{Pertrubación}
+	\begin{textblock*}{40mm}(10mm, 20mm)
+		\begin{align*}
+			\only<1->{
+				\frac{du}{dt} &=
+					u
+					\left(
+						\alpha_1 v^{\gamma_1} - \beta_1
+					\right)
+						\\
+				\frac{dv}{dt} &=
+					v
+					\left(
+						\alpha_2 u^{\gamma_2} - \beta_2
+					\right)
+				\\
+			}
+		\end{align*}
+	\end{textblock*}
+	\begin{textblock*}{40mm}(10mm, 45mm)
+		\begin{align*}
+			\only<2->{
+				du &=
+					\alpha_1 u v^{\gamma_1} dt
+					 - 
+					 u\beta_1 dt
+						\\
+				dv &=
+					\alpha_2 u^{\gamma_2} v dt
+					- 
+					v\beta_2 dt
+				\\
+			}
+		\end{align*}
+	\end{textblock*}
+	\begin{textblock*}{40mm}(10mm, 65mm)
+		\begin{align*}
+			\only<3->{
+				\beta_i dt \rightsquigarrow
+				\beta_i dt 
+				+ 
+				\textcolor{orange}{
+					\sigma_i dB_i(t)
+				}
+				\\
+			}
+		\end{align*}
+	\end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\only<4->{
+		\begin{textblock*}{65mm}(60mm, 37mm)
+			\begin{alertblock}{Nuevo Modelo}
+				\begin{align*}
+					du_t &=
+						u_t
+						\left(
+							\alpha_1 v_t^{\gamma_1} - \beta_1
+						\right) 
+						dt
+						+
+						\textcolor{orange}{
+							\sigma_1 u_t dB_1(t)
+						}
+						\\
+					dv_t &=
+						v_t
+						\left(
+							\alpha_2 u_t^{\gamma_2} - \beta_2
+						\right)
+						dt
+						+
+						\textcolor{orange}{
+							\sigma_2 v_t dB_2(t)
+						}
+				\end{align*}
+			\end{alertblock}
+		\end{textblock*}
+	}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

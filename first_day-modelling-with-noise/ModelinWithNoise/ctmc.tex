@@ -1,0 +1,81 @@
+    \begin{frame}{Formulating a SIS-CTMC }
+        Let 
+        \begin{align*}
+            & \{ I_t\}_{t \geq 0},
+            \\
+            & p_i(t) = \probX{I_t = i}.
+        \end{align*}
+        Thus, the Markov porperty becomes in
+        \begin{align*}
+            \probCX{ I_{t_{n + 1}}}{I_{t_0}, \cdots, I_{t_n} }
+                &=
+                \probCX{ I_{t_{n + 1}}}{I_{t_n}}
+                \\
+                \text{for all } &
+                t_0 < t_1 < \cdots < t_n 
+        \end{align*}
+        \begin{align*}
+            &p_{ji}(\Delta t):=
+                \begin{cases}
+                    \frac{\beta i (N - i)}{N} \Delta t 
+                        + o(\Delta t),     
+                        & j = i + 1
+                    \\
+                    (b + \gamma) i \Delta t 
+                        + o(\Delta t),
+                        &   j = i - 1
+                    \\
+                    1 - \left [
+                            \frac{\beta i (N - i)}{N} +
+                            (b + \gamma) i %                
+                        \right] \Delta t
+                        + o(\Delta t) , 
+                        & j=i
+                    \\
+                    o(\Delta t) & \text{otherwise}
+                \end{cases}
+            \\
+            & \lim_{t\to \infty}
+                \frac{o(\Delta t)}{\Delta t}
+                = 0
+        \end{align*}
+    \end{frame}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{}
+        Using the notation for birth and death
+        processes, we have
+
+        \begin{equation*}
+            p_{ij}(\Delta t):=
+                \begin{cases}
+                    b(i) \Delta t + o(\Delta t),     
+                        & j = i + 1
+                    \\
+                    d(i) \Delta t + o(\Delta t), 
+                        &   j = i - 1
+                    \\
+                    1 - \left [
+                            b(i) + d(i) %                
+                        \right] \Delta t
+                        + o(\Delta t), 
+                        & j=i
+                    \\
+                    0 & \text{otherwise}
+                \end{cases}
+        \end{equation*}
+        Assuming $\probX{I_0 = i_0} = 1$, then
+        \begin{align*}
+            p_i(t + \Delta t)
+                =&
+                    p_{i - 1} (t) b(i -1) \Delta t
+                    \\
+                    & + 
+                        p_{i + 1} (t) d(i + 1) \Delta t
+                    \\
+                    & +
+                        p_{i} (t)[1 - (b(i) + d(i))] \Delta t
+                    + o(\Delta t)
+            \\
+            i &= 1, 2, \dots, N
+        \end{align*}
+    \end{frame}

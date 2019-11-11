@@ -218,5 +218,114 @@
             \\
             i &= 1, 2, \dots, N
         \end{align*}
+        Thus
+        \begin{align*}
+            \frac{p_i (t - \Delta t) - p_i (t) }{\Delta t}
+            = & 
+            p_{i - 1} (t) b(i-1)
+                +
+                p_{i + 1} (t) d(i+1)  
+            \\
+                &-
+                p_i [b(i) + d (i)] 
+            \\
+            & i = 1,2,\cdots, N.
+        \end{align*}
+        Hence, letting $\Delta t \to 0$,  we obtain
+        \begin{align*}
+            \frac{dp_i(t)}{dt}
+            = & 
+            p_{i - 1} (t) b(i-1)
+                +
+                p_{i + 1} (t) d(i+1)  
+            \\
+                &-
+                p_i [b(i) + d (i)] 
+            \\
+                & i = 1,2,\cdots, N.
+        \end{align*}
+    \end{frame}
+    \begin{frame}{}
+        \begin{empheq}[box=\fbox]{align*}
+            FKE:  &\frac{dp}{dt} = Q p
+            \\
+            p(t) & = (p_0(t), \dots, p_N(t)) ^ {\top}
+        \end{empheq}
+        \begin{equation*}
+            Q = 
+            \begin{pmatrix}
+                0   & d(1)  & 0 & \dots     & 0
+                \\
+                0   & -[b(1) + d(1)]    & d(2)  & \dots     & 0
+                \\
+                0   & b(1)  & -[b(2) + d(2)]    & \dots     & 0     
+                \\
+                0   & 0     & b(2)  & \dots     & 0
+                \\
+                \vdots  & \vdots    & \vdots    & \ddots    & \vdots
+                \\
+                0   & 0     & 0     & \dots     & d(N)
+                \\
+                0   & 0     & 0     & \dots     & -d(N)    
+            \end{pmatrix}
+        \end{equation*}
+        Results that
+        $$
+            \lim_{t \to \infty}
+                p(t) = (1, 0, \dots, 0)^{\top}
+        $$
+        and
+        $$
+            Q = \lim_{\Delta t \to 0}
+                \frac{P(\Delta t) - I}{\Delta t}
+        $$
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{Expected value of the SIS-CTMC}
+        
+        Considering the m.g.f    
+        \begin{align*}
+            M(\theta, t)&:= 
+            \E [\exp( \theta I_t)]
+            \\
+            &= \sum_{i = 0} ^ N
+                p_i(t) \exp( i \theta)
+        \end{align*}
+
+        Results that
+        $$
+            \E[I_t ^ k] =
+                \frac{\partial ^ k M}{\partial \theta ^ k}
+                \big |_{\theta = 0},
+                \quad k=1,2 , \dots, 
+        $$
+        
+        Now we deduce a differential equation
+        for the momments of our sis-CTMC.
+    \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}{}
+        \begin{align*}
+            \frac{\partial M}{\partal t}
+                =&
+                    \sum_{i = 0} ^ N 
+                        \frac{d p_i \exp(i \theta)}{dt}
+                \\
+                    \text{from FKE} &
+                \\
+                    = &
+                   \exp(\theta) 
+                       \sum_{i = 0} ^N 
+                           p_{i - 1} \exp[(i - 1) \theta] b(i-1)
+                \\
+                    & +
+                   \exp(- \theta)
+                       \sum_{i = 0} ^N 
+                           p_{i + 1} \exp[(i + 1) \theta] d(i + 1)
+               \\
+                   & -
+                    \sum_{i = 0} ^ N
+                       p_i \exp(i \theta) (b(i) + d(i))
+        \end{align*}
     \end{frame}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.10)  10 NOV 2019 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.13)  13 NOV 2019 08:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1622,9 +1622,6 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@out=\write8
 \tcb@record@out=\write9
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
-)
 \mysaveboxM=\box106
 \mysaveboxT=\box107
 PGFPlots: reading {./IMAGENES/INTRODUCCION/gbm.csv}
@@ -1949,14 +1946,6 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
 (Font)              scaled to size 10.95pt on input line 104.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
 (Font)              scaled to size 10.0pt on input line 104.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bx/n' in size <10> not available
-(Font)              Font shape `T1/Roboto-LF/b/n' tried instead on input line 1
-04.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' in size <10> not available
-(Font)              Font shape `T1/Roboto-LF/bold/n' tried instead on input lin
-e 104.
-LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 104.
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -2003,7 +1992,7 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' in size <9> not available
 e 113.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
 (Font)              scaled to size 9.0pt on input line 113.
-<assets/background_image.png, id=107, 233.673pt x 54.2025pt>
+<assets/background_image.png, id=99, 233.673pt x 54.2025pt>
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
 Package pdftex.def Info: assets/background_image.png  used on input line 113.
@@ -2243,111 +2232,494 @@ Package pdftex.def Info: assets/background_image.png  used on input line 68.
 [27
 
 ]) (./ModelinWithNoise/dtmc.tex
-<assets/newton_cooling_law.png, id=282, 237.13594pt x 243.91125pt>
-File: assets/newton_cooling_law.png Graphic file (type png)
-<use assets/newton_cooling_law.png>
-Package pdftex.def Info: assets/newton_cooling_law.png  used on input line 39.
-(pdftex.def)             Requested size: 119.50104pt x 122.91553pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 39.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 39.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 39.
+Package pdftex.def Info: assets/background_image.png  used on input line 42.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [28
-
- <./assets/newton_cooling_law.png>]
-File: assets/background_image.png Graphic file (type png)
-<use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 65.
-(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
-
-[29
 
 ]
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 96.
+Package pdftex.def Info: assets/background_image.png  used on input line 42.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [29
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 42.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [30
 
 ]
-LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 7.0pt on input line 175.
-<assets/chain.pdf, id=307, 164.48451pt x 88.5458pt>
-File: assets/chain.pdf Graphic file (type pdf)
-<use assets/chain.pdf>
-Package pdftex.def Info: assets/chain.pdf  used on input line 175.
-(pdftex.def)             Requested size: 142.26378pt x 76.5897pt.
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 175.
+Package pdftex.def Info: assets/background_image.png  used on input line 42.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [31
 
- <./assets/chain.pdf>]
-
-Package textpos Warning: environment textblock* not in vertical mode. 
-(textpos)                Environment textblock* should not have any text
-(textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 228.
-
-File: assets/background_image.png Graphic file (type png)
-<use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 228.
-(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
-[32
-
 ]
+<assets/newton_cooling_law.png, id=302, 237.13594pt x 243.91125pt>
+File: assets/newton_cooling_law.png Graphic file (type png)
+<use assets/newton_cooling_law.png>
+Package pdftex.def Info: assets/newton_cooling_law.png  used on input line 42.
+(pdftex.def)             Requested size: 119.50104pt x 122.91553pt.
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 268.
+Package pdftex.def Info: assets/background_image.png  used on input line 42.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [32
+
+ <./assets/newton_cooling_law.png>]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 73.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [33
 
 ]
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 295.
+Package pdftex.def Info: assets/background_image.png  used on input line 73.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [34
 
 ]
-<assets/random_walk_SIS.png, id=355, 480.5955pt x 287.6346pt>
-File: assets/random_walk_SIS.png Graphic file (type png)
-<use assets/random_walk_SIS.png>
-Package pdftex.def Info: assets/random_walk_SIS.png  used on input line 320.
-(pdftex.def)             Requested size: 284.52756pt x 170.28665pt.
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 320.
+Package pdftex.def Info: assets/background_image.png  used on input line 73.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [35
 
- <./assets/random_walk_SIS.png>] [36
-
-])
-(./ModelinWithNoise/ctmc.tex
+]
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 42.
+Package pdftex.def Info: assets/background_image.png  used on input line 73.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [36
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 73.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [37
 
-] [38
-
-])
+]
 File: assets/background_image.png Graphic file (type png)
 <use assets/background_image.png>
-Package pdftex.def Info: assets/background_image.png  used on input line 126.
+Package pdftex.def Info: assets/background_image.png  used on input line 106.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [38
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 106.
 (pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
  [39
 
 ]
+LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
+(Font)              scaled to size 7.0pt on input line 182.
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [40
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [41
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [42
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [43
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [44
+
+]
+<assets/chain.pdf, id=400, 164.48451pt x 88.5458pt>
+File: assets/chain.pdf Graphic file (type pdf)
+<use assets/chain.pdf>
+Package pdftex.def Info: assets/chain.pdf  used on input line 182.
+(pdftex.def)             Requested size: 142.26378pt x 76.5897pt.
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 182.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+[45
+
+ <./assets/chain.pdf>]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 238.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [46
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 238.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [47
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 238.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [48
+
+]
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 238.
+
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 238.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+[49
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 284.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [50
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 284.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [51
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 284.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [52
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 284.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [53
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 315.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [54
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 315.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [55
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 315.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [56
+
+]
+<assets/random_walk_SIS.png, id=504, 480.5955pt x 287.6346pt>
+File: assets/random_walk_SIS.png Graphic file (type png)
+<use assets/random_walk_SIS.png>
+Package pdftex.def Info: assets/random_walk_SIS.png  used on input line 340.
+(pdftex.def)             Requested size: 284.52756pt x 170.28665pt.
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 340.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [57
+
+ <./assets/random_walk_SIS.png>])
+(./ModelinWithNoise/ctmc.tex
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 48.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [58
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 48.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [59
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 48.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+]
+[67
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 203.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [68
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 203.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [69
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 203.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+ [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] (./bu13.aux)
+\openout7 = `bu13.aux'.
+
+ (./bu13.bbl
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bx/it' in size <9> not available
+(Font)              Font shape `T1/Roboto-LF/b/it' tried instead on input line 
+5.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/it' in size <9> not available
+(Font)              Font shape `T1/Roboto-LF/bold/it' tried instead on input li
+ne 5.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/it' will be
+(Font)              scaled to size 9.0pt on input line 5.
+) (./bu13.aux)
+No file bu.aux.
+[75
+
+]
+<./assets/random_walk_SIS-CTMC.png, id=621, 540.5796pt x 316.5426pt>
+File: ./assets/random_walk_SIS-CTMC.png Graphic file (type png)
+<use ./assets/random_walk_SIS-CTMC.png>
+Package pdftex.def Info: ./assets/random_walk_SIS-CTMC.png  used on input line 
+287.
+(pdftex.def)             Requested size: 318.67097pt x 186.60394pt.
+ [76
+
+ <./assets/random_walk_SIS-CTMC.png>]) (./ModelinWithNoise/sdes.tex
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[77
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[78
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[79
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[80
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[81
+
+]
+File: assets/background_image.png Graphic file (type png)
+<use assets/background_image.png>
+Package pdftex.def Info: assets/background_image.png  used on input line 45.
+(pdftex.def)             Requested size: 43.69948pt x 10.13647pt.
+
+Overfull \vbox (26.81003pt too high) detected at line 45
+ []
+
+[82
+
+]
+Overfull \vbox (13.18028pt too high) detected at line 118
+ []
+
+[83
+
+]
+Overfull \vbox (13.18028pt too high) detected at line 118
+ []
+
+[84
+
+]
+Overfull \vbox (13.18028pt too high) detected at line 118
+ []
+
+[85
+
+]
+Overfull \vbox (13.18028pt too high) detected at line 118
+ []
+
+[86
+
+]
+Overfull \vbox (13.18028pt too high) detected at line 118
+ []
+
+[87
+
+]
+Overfull \vbox (13.87689pt too high) detected at line 168
+ []
+
+[88
+
+]
+Overfull \vbox (13.87689pt too high) detected at line 168
+ []
+
+[89
+
+]
+Overfull \vbox (13.87689pt too high) detected at line 168
+ []
+
+[90
+
+]
+Overfull \vbox (11.99858pt too high) detected at line 212
+ []
+
+[91
+
+]
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 212.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+Overfull \vbox (11.99858pt too high) detected at line 212
+ []
+
+[92
+
+]
+Overfull \vbox (11.99858pt too high) detected at line 212
+ []
+
+[93
+
+]
+Overfull \vbox (11.99858pt too high) detected at line 212
+ []
+
+[94
+
+] [95
+
+] [96
+
+] [97
+
+]
+<./assets/random_walk_SIS-SDE.png, id=750, 646.0938pt x 343.2825pt>
+File: ./assets/random_walk_SIS-SDE.png Graphic file (type png)
+<use ./assets/random_walk_SIS-SDE.png>
+Package pdftex.def Info: ./assets/random_walk_SIS-SDE.png  used on input line 2
+45.
+(pdftex.def)             Requested size: 318.67097pt x 169.32036pt.
+ [98
+
+ <./assets/random_walk_SIS-SDE.png>])
 \tf@nav=\write11
 \openout11 = `first_day_main.nav'.
 
@@ -2357,52 +2729,55 @@ Package pdftex.def Info: assets/background_image.png  used on input line 126.
 \tf@snm=\write13
 \openout13 = `first_day_main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
- (./first_day_main.aux
-(./Introduction/model_pertrubation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+
+(./first_day_main.aux (./Introduction/model_pertrubation.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `first_day_main.out' has not changed.
-(rerunfilecheck)             Checksum: B0D57F22A6AF7AFEC9202906F0AC08CF;350.
+(rerunfilecheck)             Checksum: E05E9BE256BBF52C8B21D23D367D8438;228.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 57793 strings out of 492623
- 1381525 string characters out of 6129552
- 3038664 words of memory out of 5000000
- 60547 multiletter control sequences out of 15000+600000
- 692074 words of font info for 184 fonts, out of 8000000 for 9000
+ 57874 strings out of 492623
+ 1382139 string characters out of 6129537
+ 3032334 words of memory out of 5000000
+ 60493 multiletter control sequences out of 15000+600000
+ 698926 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,19n,98p,811b,2066s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,23n,98p,811b,2066s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2019/texmf-dist/fonts/enc/dvips/roboto/rbto_hsw3yt.enc}{/usr/local/texli
 ve/2019/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}</usr/local/texlive/2
 019/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2019/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/u
-rw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/symbol/u
-syr.pfb>
-Output written on first_day_main.pdf (39 pages, 658616 bytes).
+19/texmf-dist/fonts/type1/google/roboto/Roboto-BoldItalic.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/sym
+bol/usyr.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb>
+Output written on first_day_main.pdf (98 pages, 848627 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 872 PDF objects out of 1000 (max. 8388607)
+ 646 compressed objects within 7 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 595 words of extra memory for PDF output out of 10000 (max. 10000000)
 

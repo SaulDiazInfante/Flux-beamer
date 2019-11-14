@@ -39,11 +39,11 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{bibunits}
 \usepackage{tcolorbox}
-\usepackage[texcoord,
-            grid,
-            gridunit=mm,
-            gridcolor=red!60,
-            subgridcolor=black!60]{eso-pic}
+%\usepackage[texcoord,
+%            grid,
+%            gridunit=mm,
+%            gridcolor=red!60,
+%            subgridcolor=black!60]{eso-pic}
 \usepackage{enumerate}
 \setbeamercovered{transparent}
 %--------------------------------------------------------------------------
@@ -90,9 +90,9 @@
 }
    %
 %
-\title{MODELADO CON EDEs EN BIOLOGÍA\\
-    Formulación, Análisis y Simulación Numérica.}
-\subtitle{First day: modeling with SDEs in biology}
+\title{Modelling with SDEs in Biology\\
+    Formulation, Numerical Simulation and Analysis}
+\subtitle{First day: Formaulation of Models with SDEs}
 \author{Saúl Díaz Infante Velasco}
 \institute{CONACYT-UNIVERSIDAD de SONORA, Cimat, Guanajuato Gto}
 \date{\today}
@@ -109,20 +109,18 @@
         \tableofcontents
     \end{frame}
     \section{Discrete Time Markov Chains (DTMC)}
-        \input{ModelinWithNoise/noise_effects}
-        \input{ModelinWithNoise/stochastic_modeling_alternatives}
-        \input{ModelinWithNoise/dtmc}
+        \input{./ModelinWithNoise/noise_effects.tex}
+        \input{./ModelinWithNoise/stochastic_modeling_alternatives.tex}
+        \input{./ModelinWithNoise/dtmc.tex}
 %
-%
-        
+%        
     \section{Continuous Time Markov Chains (CTMC}
-        \input{ModelinWithNoise/ctmc}
+        \input{./ModelinWithNoise/ctmc.tex}
+    \section{SDEs}
+        \input{./ModelinWithNoise/sdes.tex}
     \section{Brownian Motion}
     
     \section{Poisson Process}
     \section{Choosing a noise processes}
-        \begin{frame}{Stochastic Processes in Biology}
-        
-        \end{frame}
     \section{Open Problems}
 \end{document}

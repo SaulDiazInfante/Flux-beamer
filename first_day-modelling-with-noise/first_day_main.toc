@@ -1,6 +1,4 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{Discrete Time Markov Chains (DTMC)}{20}{0}{2}
-\beamer@sectionintoc {3}{Continuous Time Markov Chains (CTMC}{37}{0}{3}
-\beamer@sectionintoc {4}{Brownian Motion}{39}{0}{4}
-\beamer@sectionintoc {5}{Poisson Process}{39}{0}{5}
-\beamer@sectionintoc {6}{Choosing a noise processes}{39}{0}{6}
+\beamer@sectionintoc {3}{Continuous Time Markov Chains (CTMC}{58}{0}{3}
+\beamer@sectionintoc {4}{SDEs}{77}{0}{4}

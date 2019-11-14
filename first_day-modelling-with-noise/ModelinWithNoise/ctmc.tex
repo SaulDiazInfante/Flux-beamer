@@ -1,50 +1,56 @@
-    \begin{frame}{Formulating a SIS-CTMC }
+\begin{frame}{Formulating a SIS-CTMC }
+    \begin{textblock*}{60mm}(20mm, 25mm)
         Let 
-        \begin{align*}
-            & \{ I_t\}_{t \geq 0},
-            \\
-            & p_i(t) = \probX{I_t = i}.
-        \end{align*}
-        Thus, the Markov porperty becomes in
-        \begin{align*}
-            \probCX{ I_{t_{n + 1}}}{I_{t_0}, \cdots, I_{t_n} }
-                &=
-                \probCX{ I_{t_{n + 1}}}{I_{t_n}}
+        $
+                \{ I_t\}_{t \geq 0}, p_i(t) = \probX{I_t = i}.
+        $
+        \only<2->{
+            Thus, the Markov property becomes in
+            \begin{align*}
+                \probCX{ I_{t_{n + 1}}}{I_{t_0}, \cdots, I_{t_n} }
+                    &=
+                    \probCX{ I_{t_{n + 1}}}{I_{t_n}}
+                    \\
+                    \text{for all } &
+                    t_0 < t_1 < \cdots < t_n 
+            \end{align*}
+        }
+    \end{textblock*}
+    \only<3>{
+        \begin{textblock*}{90mm}(20mm, 50mm)
+            \begin{align*}
+                &p_{ji}(\Delta t):=
+                    \begin{cases}
+                        \frac{\beta i (N - i)}{N} \Delta t 
+                            + o(\Delta t),     
+                            & j = i + 1
+                        \\
+                        (b + \gamma) i \Delta t 
+                            + o(\Delta t),
+                            &   j = i - 1
+                        \\
+                        1 - \left [
+                                \frac{\beta i (N - i)}{N} +
+                                (b + \gamma) i %                
+                            \right] \Delta t
+                            + o(\Delta t) , 
+                            & j=i
+                        \\
+                        o(\Delta t) & \text{otherwise}
+                    \end{cases}
                 \\
-                \text{for all } &
-                t_0 < t_1 < \cdots < t_n 
-        \end{align*}
-        \begin{align*}
-            &p_{ji}(\Delta t):=
-                \begin{cases}
-                    \frac{\beta i (N - i)}{N} \Delta t 
-                        + o(\Delta t),     
-                        & j = i + 1
-                    \\
-                    (b + \gamma) i \Delta t 
-                        + o(\Delta t),
-                        &   j = i - 1
-                    \\
-                    1 - \left [
-                            \frac{\beta i (N - i)}{N} +
-                            (b + \gamma) i %                
-                        \right] \Delta t
-                        + o(\Delta t) , 
-                        & j=i
-                    \\
-                    o(\Delta t) & \text{otherwise}
-                \end{cases}
-            \\
-            & \lim_{t\to \infty}
-                \frac{o(\Delta t)}{\Delta t}
-                = 0
-        \end{align*}
-    \end{frame}
+                & \lim_{t\to \infty}
+                    \frac{o(\Delta t)}{\Delta t}
+                    = 0
+            \end{align*}
+        \end{textblock*}
+    }
+\end{frame}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \begin{frame}{}
+\begin{frame}{}
+    \begin{textblock*}{90mm}(10mm, 5mm)
         Using the notation for birth and death
         processes, we have
-
         \begin{equation*}
             p_{ij}(\Delta t):=
                 \begin{cases}
@@ -60,22 +66,222 @@
                         + o(\Delta t), 
                         & j=i
                     \\
-                    0 & \text{otherwise}
+                    0 & \text{otherwise}.
                 \end{cases}
         \end{equation*}
-        Assuming $\probX{I_0 = i_0} = 1$, then
-        \begin{align*}
-            p_i(t + \Delta t)
-                =&
-                    p_{i - 1} (t) b(i -1) \Delta t
-                    \\
-                    & + 
-                        p_{i + 1} (t) d(i + 1) \Delta t
-                    \\
-                    & +
-                        p_{i} (t)[1 - (b(i) + d(i))] \Delta t
-                    + o(\Delta t)
-            \\
-            i &= 1, 2, \dots, N
-        \end{align*}
+    \end{textblock*}
+    \only<2->{    
+        \begin{textblock*}{90mm}(10mm, 30mm)       
+            $\probX{I_0 = i_0} = 1$,
+            \begin{align*}
+                p_i(t + \Delta t)
+                    =&
+                        p_{i - 1} (t) b(i -1) \Delta t
+                        \\
+                        & + 
+                            p_{i + 1} (t) d(i + 1) \Delta t
+                        \\
+                        & +
+                            p_{i} (t)[1 - (b(i) + d(i))] \Delta t
+                        + o(\Delta t)
+                \\
+                i &= 1, 2, \dots, N
+            \end{align*}
+        \end{textblock*}
+    }
+    \only<3->{
+        \begin{textblock*}{90mm}(10mm, 60mm)              
+            Thus
+            \begin{align*}
+                \frac{p_i (t - \Delta t) - p_i (t) }{\Delta t}
+                = & 
+                p_{i - 1} (t) b(i-1)
+                    +
+                    p_{i + 1} (t) d(i+1)  
+                \\
+                    &-
+                    p_i [b(i) + d (i)] 
+                    +o(\Delta t)
+                \\
+                & i = 1,2,\cdots, N.
+            \end{align*}
+        \end{textblock*}
+    }
     \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+    \begin{textblock*}{60mm}(10mm, 10mm)       
+        Hence, letting $\Delta t \to 0$,  we obtain
+        \begin{align*}
+            \frac{dp_i(t)}{dt}
+            = & 
+            p_{i - 1} (t) b(i-1)
+                +
+                p_{i + 1} (t) d(i+1)  
+            \\
+                &-
+                p_i [b(i) + d (i)] 
+            \\
+                & i = 1,2,\cdots, N.
+        \end{align*}
+    \end{textblock*}
+    \only<2->{        
+        \begin{textblock*}{60mm}(65mm, 10mm)       
+            \begin{empheq}[box=\fbox]{align*}
+                FKE:  &\frac{dp}{dt} = Q p
+                \\
+                p(t) & = (p_0(t), \dots, p_N(t)) ^ {\top}
+            \end{empheq}
+        \end{textblock*}
+    }
+    \only<3->{
+        \begin{textblock*}{90mm}(10mm, 30mm)
+            \begin{equation*}
+                Q = 
+                \begin{pmatrix}
+                    0   & d(1)  & 0 & \dots     & 0
+                    \\
+                    0   & -[b(1) + d(1)]    & d(2)  & \dots     & 0
+                    \\
+                    0   & b(1)  & -[b(2) + d(2)]    & \dots     & 0     
+                    \\
+                    0   & 0     & b(2)  & \dots     & 0
+                    \\
+                    \vdots  & \vdots    & \vdots    & \ddots    & \vdots
+                    \\
+                    0   & 0     & 0     & \dots     & d(N)
+                    \\
+                    0   & 0     & 0     & \dots     & -d(N)    
+                \end{pmatrix}
+            \end{equation*}
+            \only<4->{
+                Results that
+                $$
+                    \lim_{t \to \infty}
+                        p(t) = (1, 0, \dots, 0)^{\top}
+                $$
+                and
+                $$
+                    Q = \lim_{\Delta t \to 0}
+                        \frac{P(\Delta t) - I}{\Delta t}
+                $$
+            }
+        \end{textblock*}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Expected value of the SIS-CTMC}
+    \begin{textblock*}{50mm}(10mm, 20mm)
+        Consider the m.g.f    
+        \begin{align*}
+            M(\theta, t)&:= 
+            \E [\exp( \theta I_t)]
+            \\
+            &= \sum_{i = 0} ^ N
+                p_i(t) \exp( i \theta)
+        \end{align*}
+    \end{textblock*}   
+    \only<2->{
+        \begin{textblock*}{60mm}(65mm, 20mm)
+            Results that
+            $$
+                \E[I_t ^ k] =
+                    \frac{\partial ^ k M}{\partial \theta ^ k}
+                    \big |_{\theta = 0},
+                    \quad k=1,2 , \dots, 
+            $$
+            
+            
+        \end{textblock*}
+    }
+    \only<3>{
+        \begin{textblock*}{120mm}(15mm, 50mm)
+            Now we deduce a differential equation
+            for the moments of our sis-CTMC.
+        \end{textblock*}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+    \begin{textblock*}{100mm}(10mm, 10mm)
+        \begin{align*}
+            \frac{\partial M}{\partial t}
+                =&
+                    \sum_{i = 0} ^ N 
+                        \frac{d p_i}{dt}
+                        \exp(i \theta)
+                \\
+                \only<2>{
+                    \text{from r.h.s of  FKE} &
+                    \\
+                        = &
+                        \exp(\theta) 
+                            \sum_{i = 0} ^N 
+                                p_{i - 1} \exp[(i - 1) \theta] b(i-1)
+                    \\
+                        & +
+                        \exp(- \theta)
+                            \sum_{i = 0} ^N 
+                                p_{i + 1} \exp[(i + 1) \theta] d(i + 1)
+                    \\
+                        & -
+                        \sum_{i = 0} ^ N
+                            p_i \exp(i \theta) (b(i) + d(i))
+                }
+        \end{align*}
+    \end{textblock*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+    Substituting definition of $b, d$
+    we obtain
+    \begin{align*}
+        \frac{\partial M}{\partial t} 
+        =&
+            \beta(exp(\theta) -1) 
+                \sum_{i = 1}^N i 
+                    p_i \exp(i \theta)
+        \\    
+        &+ 
+            (b + \gamma)(\exp(- \theta) -1) 
+                \sum_{i=1}^N 
+                    i p_i \exp(i\theta)
+        \\
+        & -
+            \frac{\beta}{N} (\exp(\theta) - 1)
+                \sum_{i=1}^N
+                    i ^ 2 p_i \exp(i \theta)
+        \\
+        \only<2>{
+            = &
+                [
+                    \beta(exp(\theta) -1)
+                    (b + \gamma)(\exp(- \theta) -1)
+                ] \frac{\partial M}{ \partial \theta}
+            \\
+            & -
+                \frac{\beta}{N} (\exp(\theta) - 1)
+                \frac{\partial ^ 2 M}{\partial \theta^2}
+        }
+    \end{align*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+    \begin{bibunit}[apalike]
+        Following \cite{Bailey1964} we can deduce from the above equation
+        \begin{equation*}
+        \frac{d \E (I_t)}{dt} =
+            [\beta - (b + \gamma)] \E(I_t)
+            - \frac{\beta}{N}
+                \E(I_t ^2).
+        \end{equation*}
+        Then we conclude as in the SIS-DTMC.
+        \putbib
+    \end{bibunit}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{frame}{}
+    Using the Guillespie algorithm
+         \includegraphics[width=\textwidth, keepaspectratio]%
+         {./assets/random_walk_SIS-CTMC.png}
+\end{frame}

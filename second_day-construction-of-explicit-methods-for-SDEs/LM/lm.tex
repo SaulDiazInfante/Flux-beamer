@@ -1,0 +1,43 @@
+\begin{frame}{}
+    Let, $I_t = i$. Denote by $T_i$ the interevent time.
+    $H_i(t) \probX{T_i>t}$.
+    \begin{align*}
+        H_i(t + \Delta t) &= H_i(t) p_{ii}(\Delta t)
+        \\
+            &=H_i(t)(1 -(b(i) + d(i)) ) \Delta_t + o(\Delta t)
+        \\
+        \frac{H_i(t + \Delta t) - H_i(t)}{\Delta t } 
+            &= -(b(i)+d(i))H_i(t) + o(\Delta t)
+    \end{align*}
+    Thus
+    $$
+        \frac{d H_i(t)}{dt} = -(b(i)+d(i))H_i(t)
+    $$
+    which have solution
+    $
+        H_i(t) = \exp(-(b(i)+d(i)) t )
+    $
+\end{frame}
+\begin{frame}{}
+    Let $F_i(t) = \probX{T_i \leq t}
+        = 1- exp(-(b(i)+d(i)) t )
+    $ 
+    
+    Then using a uniform r.v. $u\sim [0,1]$
+    \begin{align*}
+        \probX{F_i^{-1}(u)\leq t}
+            &=
+            \probX{F_i(F_i^{-1}(u)) \leq F_i(t)}
+            \\
+            &=
+            \probX{u \leq F_i(t)}
+            \\
+            &=
+            F_i(t).
+    \end{align*}
+    Therefore
+    $$
+        T_i =
+        F_i^{-1}(u) = -\frac{-\log(u)}{b(i)+d(i)}
+    $$
+\end{frame}

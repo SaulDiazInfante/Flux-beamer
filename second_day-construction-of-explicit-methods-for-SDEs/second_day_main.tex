@@ -1,0 +1,104 @@
+\documentclass[9pt]{beamer}
+\usepackage[sfdefault]{roboto}
+\usepackage{styles/fluxmacros}
+\usefolder{styles}
+\usetheme[style=asphalt]{flux}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{siunitx}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{thumbpdf}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{url}
+\usepackage{empheq}
+\usepackage{fancybox}
+\usepackage{esint}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{tikz}%
+\usepackage{circuitikz}
+\usepackage{csvsimple}
+\usepackage{pgfplots}
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{proba}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{bibunits}
+\usepackage{tcolorbox}
+%\usepackage[texcoord,
+%            grid,
+%            gridunit=mm,
+%            gridcolor=red!60,
+%            subgridcolor=black!60]{eso-pic}
+\usepackage{enumerate}
+\setbeamercovered{transparent}
+%% Informations
+\usepackage[makeroom]{cancel}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+\mode<presentation>
+{  
+    %\usetheme{PaloAlto}
+    %\usecolortheme[named=kugreen]{structure}
+    \useinnertheme{progressbar}
+    %\usefonttheme{default}
+    %\usefonttheme{serif}
+    %\setbeamercovered{transparent}
+    %\setbeamertemplate{blocks}[rounded][shadow=true]
+    %s\setbeamertemplate{navigation symbols}[only frame symbol]
+}
+   %
+%
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Informations
+\title{Modelling SDEs in biology\\
+    Formulation, Numerical Simulation and Analysis.}
+\subtitle{Second day: Numerical methods for SDEs}
+\author{Saúl Díaz Infante Velasco}
+\institute{CONACYT-UNIVERSIDAD de SONORA, Cimat, Guanajuato Gto}
+\date{\today}
+\titlegraphic{assets/background_image.png}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\input{setup}
+\begin{document}
+    \titlepage
+    \section{HW}
+        \input{./homework/homework.tex}
+    \begin{frame}
+        \frametitle{Table of contents}
+        \tableofcontents
+    \end{frame}
+    \section{LM}
+        \input{./LM/lm.tex}
+    \section{Explicit schemes}
+        \input{./schemes_construction/notatio_sdes.tex}
+        \input{./schemes_construction/aproximacion_idea.tex}
+    \section{Brownian Motion}
+        \input{./rw/random_walks.tex}
+    \section{Weak vs Strong}
+        \input{./Weak_Strong/weak_vs_strong.tex}
+        \input{./schemes_construction/schemes.tex}
+        \input{./schemes_construction/software.tex}
+    \section{Convergence and stability}
+        \input{./convergence_stability/convergence_stability.tex}
+        \input{./convergence_stability/consistency.tex}
+    \appendix
+        \input{appendix.tex}
+\end{document}

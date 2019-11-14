@@ -1,0 +1,508 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy}
+\usepackage{empheq}
+\usepackage{lipsum}
+\usepackage{sectsty}
+\usepackage{bbm}
+\usepackage{asymptote}
+\usepackage[sectionbib]{natbib}
+\usepackage[amssymb]{SIunits}
+\allsectionsfont{\centering \normalfont\scshape}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor} % [dvipsnames]
+\definecolor{halfgray}{gray}{0.55}
+% chapter numbers will be semi transparent .5.55 .6 .0
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
+\definecolor{Black}{cmyk}{0, 0, 0, 0}
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=1, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for
+%printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3,
+%pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true,
+pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true,
+bookmarksopenlevel=1,%
+    hypertexnames=true,
+pdfhighlight=/O,hyperfootnotes=true,nesting=true,frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen,
+pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    %pdftitle={\myTitle},%
+    %pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+hyperfigures=ture,
+pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+   }
+%\usepackage{multienum}
+\usepackage{multicol}
+\usepackage{paralist}
+\usepackage{pifont}
+\usepackage{sistyle}
+\usepackage{chngpage}
+\usepackage{algorithm2e}
+\usepackage{enumerate}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[labelfont=bf,textfont={sl,bf},lofdepth,lotdepth]{subfig}
+%\DeclareCaptionListOfFormat{colon}{#2:}
+\usepackage{fixltx2e}
+%\captionsetup[subtable]{listofformat=colon,listofnumwidth=1.5em,
+% listofindent=3.8em}
+\newcommand{\figbox}[1]{%
+  \fbox{%
+    \vbox to 1in{%
+    \vfil
+    \hbox to 2in{%
+      \hfil
+      #1%
+      \hfil}%
+    \vfil}}
+}
+\makeatletter
+  \newcommand{\setcaptype}[1]{%
+    \listsubcaptions
+    \renewcommand{\@captype}{#1}
+  }
+  \renewcommand\abstract[1]{%
+    \def\@abstract{%
+      \centerline{{\large\bf Abstract}}
+      \noindent
+      #1}
+  }
+%   \renewcommand\@maketitle{%
+%     \newpage
+%     \null\vfil
+%     \vskip 60\p@
+%     \begin{center}%
+%       {\LARGE \@title \par}%
+%       \vskip 3em%
+%       {\large
+%        \lineskip .75em%
+%        \begin{tabular}[t]{c}%
+%          \@author
+%        \end{tabular}\par}%
+%       \vskip 1.5em%
+%       {\large \@date \par}%
+%     \end{center}%
+%     \vskip 2.5em%
+%     \@abstract
+%     \vfil\null}%
+\makeatother
+%\usepackage{bibunits}
+\newtheorem{theorem}{Teorema}
+\newtheorem{definition}{Definici\'on}
+\newtheorem{notation}{Afirmaci\'on}
+\newtheorem{lemma}{Lema}
+\setcounter{figure}{0}
+%\setcounter{table}{1}
+\parindent=0 in
+\parskip=.25 in
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\addto\extrasspanish{%%
+\def\sectionautorefname{secci\'on}%
+\def\subsectionautorefname{subsecci\'on}%
+\def\chapterautorefname{cap\'itulo}%
+\def\figureautorefname{figura}%
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\setlength\parindent{0pt}
+\setlength\parskip{5pt}
+%-----------------------------------------------------------------------------
+%
+%	TITLE SECTION
+%_----------------------------------------------------------------------------
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+ \setcounter{section}{2}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Auxiliar"
+\pdf_author "Saul"
+\pdf_subject "La que sea"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 1in
+\bottommargin 0.25in
+\headheight 1in
+\headsep 1in
+\footskip 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Ecuaciones para Consistencia y Estabilidad en Media Cuadrática.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}[Solución asintotica p-estable]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X_t^{t_0}$ una la solución de la EDE.
+\end_layout
+
+\begin_layout Plain Layout
+
+	$X_t^{t_0}$ es asíntotica p-estable si y sólo si
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+lim_{t
+\backslash
+to 
+\backslash
+infty} |X_t^{t_0}|^p =0 
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+Necesitare el siguiente resultado.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}[Desigualdad de Jenssen]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X$ una v.a.
+ integrable, $
+\backslash
+mathcal{F}$ una $
+\backslash
+sigma-$ álebra
+\end_layout
+
+\begin_layout Plain Layout
+
+	y $
+\backslash
+varphi:
+\backslash
+mathbb{R}
+\backslash
+to 
+\backslash
+mathbb{R}$ una función convexa.
+\end_layout
+
+\begin_layout Plain Layout
+
+	Entonces
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\backslash
+varphi(
+\backslash
+mathbb{E}(|X|)) 
+\backslash
+leq
+\backslash
+mathbb{E}(|
+\backslash
+varphi(X)|).$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resulta inmediato el notar que esta última desigualdad se invierte si consideram
+os una función concava.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}[Martingala]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X_t$ un p.e.
+ y $
+\backslash
+mathcal{F_t}$ la filtración generado por este 	proceso.
+ $X_t$ Es Martingala si 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{enumerate}[(i)]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item $
+\backslash
+displaystyle 
+\backslash
+mathbb{E}(X_t)<
+\backslash
+infty 
+\backslash
+qquad 
+\backslash
+forall t$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item $ 
+\backslash
+mathbb{E}(X_{t+s}|
+\backslash
+mathcal{F}_{s})=X_s$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Bajo las hipóteis del teorema de existencia y unicidad para soluciones
+ fuertes de EDEs.
+ Si $Y^{
+\backslash
+delta}$ es consitente entonces $Y^{
+\backslash
+delta}$ converge en setido fuerte al proceso de It
+\backslash
+^{o} $X_t$.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prueba
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $0\leqq s\leq t\leq T$
+\end_inset
+
+ definimos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z(t):=\sup_{0\leq s\leq t}\mathbb{E}(|Y_{n_{s}}^{\delta}-X_{s}|^{2}),\qquad n_{t}:=\max\left\{ n=0,1,\ldots:t_{n}\leq t\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando el lado derecho de la EDE y el sentido de integral se tiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Z(t) & =\mathbb{E}(|\sum_{n=0}^{n_{s}-1}(y_{n+1}^{\delta}-y_{n}^{\delta})-\int_{0}^{s}a(X_{r})dr-\intop_{0}^{s}b(x_{r})dB_{r}|^{2})\\
+ & \leq C_{1}\sup_{0\leq s\leq t}\left\{ \mathbb{E}(|\sum_{n=0}^{n_{s}-1}(y_{n+1}^{\delta}-y_{n}^{\delta}|\mathit{A_{\tau_{n}}})-a(Y_{n}^{\delta})\Delta_{n}|^{2})\right\} \\
+ & +\mathbb{E}(|Y_{n+1}^{\delta}-Y_{n}^{\delta}-\mathbb{E}(y_{n+1}^{\delta}-y_{n}^{\delta}|\mathit{A_{\tau_{n}}})-b(Y_{n}^{\delta})B_{n}|^{2})\\
+ & +\mathbb{E}(|\int_{0}^{\tau_{n_{s}}}a(Y_{n_{r}}^{\delta})-a(X_{r})dr|^{2})\\
+ & +\mathbb{E}(|\int_{0}^{\tau_{n_{s}}}b(Y_{n_{r}}^{\delta})-b(X_{r})dB_{r}|^{2})\\
+ & +\mathbb{E}(|\int_{\tau_{n_{s}}}^{\text{s}}a(X_{r})dr|^{2})+\mathbb{E}(|\int_{\tau_{n_{s}}}^{s}a(X_{r})dr|^{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

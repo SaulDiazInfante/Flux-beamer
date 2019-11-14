@@ -1,0 +1,377 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\begin{bibunit}[apalike]
+		\frametitle{Nuestra idea}
+		\hypertarget{Idea}{}    
+		En 2005, Matus et. al., usan una versión del \hyperlink{dfn:Steklov}{\structure{promedio de Steklov}}, 
+		para logra un esquema en diferencias \structure{exacto} que resolve EDOs no lineales de la forma
+		\begin{equation*}
+			\frac{dx}{dt}=f_1(x)f_2(t)
+		\end{equation*}
+		\nocite{matus2005exact}
+		\biblio{BibliografiaTesis}
+	\end{bibunit}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}%[label=frm:12]
+	\frametitle{Método Steklov para EDEs escalares}
+	Queremos aproximar:
+	\begin{align*}
+		dy(t)&=f(t,y(t))dt + g(t,y(t))dW_t, \quad y_0=cte\quad t\in[0,T],\\
+		f,g&:[0,T]\times \R \to \R.
+	\end{align*}
+	\begin{block}{Considerando su forma integral:}
+		\begin{equation*}
+			y(t) = y_0 + \int_{0}^{t} f(s,y(s))ds
+			+\int_{0}^t g(s, y(s))dW_s
+		\end{equation*}
+	\end{block}
+\end{frame}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{bibunit}[apalike]
+\begin{frame}%[label=frm:13]
+	\frametitle{Existencia y unicidad de soluciones}
+	\begin{overlayarea}{\textwidth}{.5\textwidth}
+	\only<+>{
+	\begin{block}{Sean $f,g:\R \to \R$.}
+	  Hipótesis:
+	  \begin{itemize}
+	  	\item $f(t,x) = f_1(t)f_2(x)$.
+		\item 
+			\structure{Lipschitz globales}. $\exists \ L_1>0$ t.q. $\forall x,y \in \R$, $t\in [0,T]$
+			\begin{align*}
+				&|f(x,t)-f(y,t)|^2 \vee |g(x,t)-g(y,t)|^2 \leq L |x-y|^2.
+			\end{align*}
+		\item
+			\structure{Crecimiento Lineal}. $\exists \ L_2>0$ t.q. $\forall x,y \in \R$, $t\in [0,T]$
+			\begin{align*}
+				 &|f(x,t)|^2 \vee |g(x,t)|^2 \leq L_2 (1+|x|^2).
+			\end{align*} 
+	  \end{itemize}
+	\end{block}
+	}
+	\only<+->{
+	  \begin{block}{Bajo estos supuestos  $\exists ! \ y(t)$ t.q.}
+		$$
+		\mathbb{E}
+		\left(
+			\int_{0}^T|y(t)|^2dt
+		\right)<\infty
+		$$
+		\nocite{Mao2007}
+	  \end{block}
+	}
+  \end{overlayarea}
+  \only<2>{\biblio{PhdThesisBib.bib}}
+  \end{frame}
+\end{bibunit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}%[label=frm:14]{}
+  \frametitle{Construcción de métodos Tipo Euler}
+	  \begin{columns}
+	  	\column{.3\textwidth}
+				  Tipo base: \structure{Euler-Maruyama (EM)}.	  
+		\column{.8\textwidth}
+			\vspace*{-.6cm}
+			\only<3>{
+				\begin{empheq}[box=\shadowbox*]{equation*}
+					y({t_{n+1}})=y_{t_{n}}+
+					\int_{t_n}^{t_{n+1}}f(y(s))ds 
+					+ \int_{t_n}^{t_{n+1}} g(y(s)) dW_s
+					\tag{*}
+				\end{empheq}
+			}
+	  \end{columns}
+  %
+  \begin{overlayarea}{\textwidth}{.5\textwidth}
+	\only<1-2>{
+	\begin{block}{Discretizamos $[0,T]$ con un  paso uniforme $h$:}
+	  \begin{itemize}
+		\item $t_n=nh$ $n=0,1,2,\dots, N$.
+		\item $Y_n \approx y({t_n})$
+	  \end{itemize}
+	\end{block}
+	}
+	\only<2>{
+	\begin{block}{Para cada nodo}
+		\begin{align*}
+		  y({t_{n+1}})&=y_{t_{n}}+
+		  \underbrace{
+		  	\int_{t_n}^{t_{n+1}}f(y(s))ds}_{\approx \text{Con algún método}
+		  }
+		  + \underbrace{
+				\int_{t_n}^{t_{n+1}}
+					g(y(s)) dW_s	
+			}_{\approx  g(y_{t_n}) \Delta W_n}\\
+			\Delta W_n&:= 
+				\left(
+						W_{t_{n+1}}-W_{t_{n}}
+				\right) \sim \sqrt{h}\calN(0,1).
+		\end{align*}
+	  \end{block}
+	}
+	\only<3>{
+	\begin{exampleblock}{Para el Euler-Mayurama se considera}
+		$ \displaystyle
+		 	\int_{t_n}^{t_{n+1}} f(y({s}))ds 
+			 	\approx f(Y_n)h
+		$,\\
+		\vspace*{.25cm}
+		EM  para (*) :
+		$\displaystyle
+			\textcolor{orange}{
+				Y_{n+1}=Y_n+f(Y_n)h + g(Y_n) \Delta W_n,
+			}
+			\quad n=0,1\dots, N-1,\ Y_0 = y_0.		
+		$
+	\end{exampleblock}
+	}
+  \end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}%[label=frm:15]{}
+	\frametitle{Promedio especial de Steklov}
+	\begin{overlayarea}{\textwidth}{.8\textwidth}
+	\vspace*{1cm}
+	 \begin{tcolorbox}[title =Estimamos la deriva con el promedio especial de Steklov ]
+		 \only<1-2>{
+			\begin{align*}
+				\textcolor{cyan}{
+					f(y(t))
+				} 
+				&\approx 
+				\textcolor<1-3>{magenta}{
+					\varphi(Y_n, Y_{n+1})
+					:=
+					\left(
+						\frac{1}{Y_{n+1}-Y_{n}}  
+						\int_{Y_n}^{Y_{n+1}} \frac{du}{f(u)}
+					\right)^{-1},			
+				}\\
+				t_n\leq & t \leq t_{n+1},\\
+				Y_n=&Y_{t_n}, \quad t_n=nh.
+			\end{align*}
+		}
+		\only<3>{
+			\begin{align*}
+				\textcolor{cyan}{
+					f(y(t))
+				} 
+				&\approx
+				\varphi(Y_n, Y_{n+1})
+				:=
+				\underbrace{
+					\left(
+						\textcolor{red}{		
+							\frac{1}{Y_{n+1}-Y_{n}}  
+							\int_{Y_n}^{Y_{n+1}} \frac{du}{f(u)}
+						}
+					\right)^{-1}
+				}_{\textcolor{orange}{Restrictivo?}}
+			\end{align*}
+		}
+	\end{tcolorbox}
+	\only<2>{
+		\begin{block}{Aproximamos}
+			\begin{equation*}
+				\int_{t_n}^{t_{n+1}}f(y(s))ds 
+				\textcolor{orange}{
+					\approx \varphi(Y_n, Y_{n+1})h
+				}
+			\end{equation*}
+		\end{block}
+	}
+	\begin{bibunit}[apalike]
+		\nocite{matus2005exact}
+		\only<1>{
+			\biblio{BibliografiaTesis}
+		}
+	\end{bibunit}
+	\end{overlayarea}   
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzstyle{na} = [baseline=-.5ex]
+\tikzstyle{blockYellow}= [rectangle, draw, fill=yellow!40,
+    text width=6em, text centered, rounded corners, minimum height=4em]
+
+\tikzstyle{blockGreen}= [rectangle, draw, fill=green!40,
+    text width=10em, text centered, rounded corners, minimum height=4em]
+
+\tikzstyle{blockGray}= [rectangle, draw, fill=gray!40,
+    text width=6em, text centered, rounded corners, minimum height=4em] 
+\tikzstyle{every picture}+=[remember picture]
+\everymath{\displaystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Métodos Steklov }
+	\begin{block}{Familia Steklov}
+		\begin{equation*}
+			Y_{n+1}=
+				\tikz[baseline]{
+					\only<1-3>{
+						\node[fill=blue!20,anchor=base] (t1)
+							{$Y_n+\varphi(Y_n, Y_{n+1}) h$};
+						}
+					\only<4->{
+						\node[fill=green!20,anchor=base] (t1)
+							{$Y_n^{\star}$};
+					}
+				}
+					+
+				\tikz[baseline]{
+					\only<1-3>{
+						\node[fill=red!20,anchor=base] (t2)
+						{$g(Y_n)\Delta W_n$};
+					}
+					\only<4->{
+						\node[fill=red!20,anchor=base] (t2)
+							{$g(Y^{\star}_n)\Delta W_n$};
+					}
+				}
+		\end{equation*}
+	\end{block}
+	\begin{overlayarea}{\textwidth}{.5\textheight}
+		\begin{columns}
+			\column{.7\textwidth}
+				\begin{itemize}
+					\item <2-> 
+						\tikz[na] \node [blockYellow] (n1) 
+							{$\approx\int_{Y_n}^{Y_{n+1}} \frac{du}{f(u)}$ (Cuadraturas)};
+					\item<4-> 
+						\tikz[na] \node[blockGreen] (n3) 
+							{$Y_n^{\star} = Y_n + h \varphi(Y_n, Y_n^{\star})$ \\ (Split-Step)};
+				\end{itemize}
+			\column{.5\textwidth}
+			\begin{itemize}
+				\item <3-> 
+					\tikz[na] \node[blockGray] (n2) 
+						{$\varphi(Y_n, Y_{n+1}^*)$\\(Pre-Corr)};
+			\end{itemize}
+		\end{columns}	
+		\begin{tikzpicture}[overlay]
+			\path [->]<2->    (t1) edge[bend right]  (n1);%
+			\path [->]<3->    (t1) edge[bend left]   (n2);%
+			\path [->]<4->    (t1) edge[bend left]   (n3);%
+		\end{tikzpicture}
+	\end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{
+	state/.style={
+		rectangle,
+		rounded corners,
+		draw=black, very thick,
+		minimum height=1em,
+		inner sep=1pt
+		%text centered
+	},
+	invisible/.style={opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+\begin{frame}
+	\frametitle{Steklov Explicito}
+	\vspace*{.25cm}
+	\begin{tikzpicture}[->,>=stealth']
+		\node[
+			state,
+			text width=5.5cm,
+			fill = gray!20
+		] (SDE)
+		{
+			\vspace*{-0.5cm}
+			\begin{align*}
+				dy(t) &= {\color{red} f(t,y(t))dt} + g(t,y(t))dW_t \\
+				f(t,y(t)) &= f_1(t) f_2(y(t))
+			\end{align*} 
+		}; 		
+		\node[
+			state,
+			below of=SDE,
+			yshift=-2cm,
+			anchor=center,
+			visible on=<2->
+		] (SID) 
+		{
+			\begin{tabular}{l}
+				\textbf{Steklov Implicito Determinista}\\
+				\parbox{4.5cm}{
+					$
+						y_{n+1} = y_n + h \varphi_1(t_n)\varphi_2(y_n,y_{n+1})
+					$	
+				}\\[.5em]
+				\textbf{Define}\\
+				\parbox{4cm}{
+					$
+						H(x):= \int_{0}^{x}
+							\frac{du}{f_2(u)}
+					$	
+				}
+			\end{tabular}
+		};
+		% State: Steklov Equation
+		\node[
+			state,    	% layout (defined above)
+			text width=5.5cm, 	% max text width
+			yshift=2.25cm, 		% move 2cm in y
+			right of=SID, 	% Position is to the right of QUERY
+			node distance=6.0cm, 	% distance to QUERY
+			anchor=center,
+			visible on=<3->
+		] (SE) 	% posistion relative to the center of the 'box'
+		{%
+			$\displaystyle
+				y_{n+1} - y_n
+				=
+				\varphi_1(t_n)\frac{y_{n+1}-y_n}{H(y_{n+1})-H(y_{n})}h
+			$
+		};
+		
+		% State: Steklov Explicito Determinista
+		\node[
+			state,
+			below of=SE,
+			yshift=-3cm,
+			anchor=center,
+			text width=5.2cm,
+			visible on=<5->
+		] (SED)  
+		{%
+			\textbf{Steklov Explicito Determinista}
+			\begin{align*}
+				y_{n+1} &= \Psi_h(t_n, Y_n) \\
+				\Psi_h(t_n, Y_n)&:= H^{-1}
+				\left[
+				H(y_n) + h \varphi_1(t_n) 
+				\right]
+			\end{align*}
+		};
+		
+		% State: Steklov Explicito Stocastico
+		\node[
+			state,
+			below of=SID,
+			yshift=-1.5cm,
+			anchor=center,
+			text width=5cm,
+			fill=green!40,
+			visible on=<6->
+		] (SES) 
+		{%
+			\textbf{Steklov Explicito Estoc\'astico}
+			\begin{align*}
+				Y_{n+1} &= \Psi_h(t_n, Y_n) + g(t_n, Y_n)\Delta W_n \\
+			\end{align*}
+		};
+		
+		% draw the paths and and print some Text below/above the graph
+		\path [->]<2-> (SDE)  edge   (SID) ;
+		\path [->]<3-> (SID)  edge[bend left=25]   (SE) ;
+		\path [->]<4-> (SE)   edge    node[anchor=left,right]{Resolviendo $y_{n+1}$} (SED);
+		\path [->]<6-> (SED)  edge [bend right=-20] (SES);
+	\end{tikzpicture}
+\end{frame}

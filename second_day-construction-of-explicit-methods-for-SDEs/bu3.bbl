@@ -1,0 +1,10 @@
+\begin{thebibliography}{HJK12}
+
+\bibitem[HJK12]{Hutzenthaler2012a}
+Martin Hutzenthaler, Arnulf Jentzen, and Peter~E. Kloeden.
+\newblock Strong convergence of an explicit numerical method for sdes with
+  nonglobally lipschitz continuous coefficients.
+\newblock {\em The Annals of Applied Probability}, 22(4):1611--1641, August
+  2012.
+
+\end{thebibliography}

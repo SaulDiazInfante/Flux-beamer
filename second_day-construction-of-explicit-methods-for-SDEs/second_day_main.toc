@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{HW}{2}{0}{1}
+\beamer@sectionintoc {2}{LM}{9}{0}{2}
+\beamer@sectionintoc {3}{Explicit schemes}{11}{0}{3}
+\beamer@sectionintoc {4}{Brownian Motion}{24}{0}{4}
+\beamer@sectionintoc {5}{Weak vs Strong}{56}{0}{5}
+\beamer@sectionintoc {6}{Convergence and stability}{63}{0}{6}

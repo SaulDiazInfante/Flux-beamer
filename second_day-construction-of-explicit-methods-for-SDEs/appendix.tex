@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=ExistenciaMao,noframenumbering]
+    \frametitle{Apendice A: Existencia y unicidad (condiciones locales)}        
+    \begin{overlayarea}{\textwidth}{1.0\textheight} 
+    \begin{columns}
+        \column{.57\textwidth}
+            \begin{theorem}
+                 (EU-1)-(EU-3)              
+                $\Rightarrow$ 
+                $\exists ! \  \{y(t)\}_{t\geq 0}$, $\forall y(0)=y_0\in 
+                \mathbb{R}^d$. 
+                \\              
+                 Further
+                 $0<T<\infty$,
+                \begin{itemize}[<+-|alert@+>]
+                    \item               
+                    $
+                        \EX{y(T)}< 
+                            \left(
+                                |y_0|^2 +2\alpha T 
+                            \right)\exp(2\beta T),
+                    $
+                    \item               
+                    $\tau_n := \inf \{ t\geq 0 : |y(t)|>n\}$, $n\in \N$,         
+           
+                    \only<3->{
+                        $$  
+                            \textcolor<3>{red}{
+                                \prob{[\tau_n\leq T]}
+                                \leq \frac{
+                                \left(
+                                |y_0|^2 +2\alpha T 
+                                \right)
+                                \exp(2\beta T)
+                                }{n},
+                            }
+                        $$ 
+                    }   
+                    \item<4>                    
+                        $
+                            \textcolor<4>{red}{
+                                \EX{|y(t)|^p}
+                                \leq
+                                2^{\frac{p-2}{2}}
+                                \left(
+                                1 + \EX{|y_0|^p}
+                                \right)e^{Cpt}.             
+                            }
+                        $           
+                \end{itemize}           
+            \end{theorem}
+        \column{.5\textwidth}       
+            \begin{bibunit}[apalike]        
+                \cite{Mao2013}          
+                \biblio{PhdThesisBib.bib}
+            \end{bibunit}
+    \end{columns}
+        
+    \hyperlink{Extension<4>}{
+        \beamerreturnbutton{Extension}
+    }
+    \end{overlayarea}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

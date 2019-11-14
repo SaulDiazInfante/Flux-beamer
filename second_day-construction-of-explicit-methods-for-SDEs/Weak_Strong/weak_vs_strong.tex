@@ -1,0 +1,40 @@
+\begin{frame}
+  \frametitle{Weak vs Strong}
+  \begin{empheq}[box={\Garybox[given]}]{align*}
+ 		dx(t)
+			&=f(x(t))dt + g(x(t)) dB(t), 
+ 		\\
+			x(0) &= x_0, \quad t\in[0,T]
+ 	\end{empheq}
+  \begin{overlayarea}{\textwidth}{.7\textheight}
+    \begin{columns}
+      \column{.48\textwidth}
+        \begin{block}{Weak}
+          $$
+						X_{n+1} = X_n + f(X_n) h 
+							+ g(X_n) 
+							\underbrace{\Delta B_n}_{%
+								\substack{
+									\approx \sqrt{h} \varepsilon_n\\
+									\probX{\varepsilon_n=\pm 1}=1/2
+								}
+							}
+					$$
+        \end{block}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \column{.48\textwidth}
+          \begin{exampleblock}{strong}
+          $$
+						X_{n+1} = X_n + f(X_n) h 
+							+ g(X_n) 
+							\underbrace{\Delta B_n}_{%
+								\substack{
+									\approx \sqrt{h} \epsilon_n\\
+									\epsilon_n \sim N(0,1)
+								}
+							}
+					$$
+          \end{exampleblock}
+    \end{columns}
+  \end{overlayarea}
+\end{frame}

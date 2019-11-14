@@ -1,0 +1,377 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%11
+\begin{frame}[label=Extension]
+	\frametitle{Extensi\'on al caso vectorial}    
+	\begin{overlayarea}{\textwidth}{.1\textheight}
+		\vspace*{-.25cm}
+		\begin{empheq}[box={\Garybox[EDE Vectorial]}]{equation*}
+			dy(t) = f(y(t)) dt + g(y(t)) dW_t, \quad Y_0=y_0.  \tag{EDE}
+		\end{empheq}
+	\end{overlayarea}
+	%
+	\tcbset{
+		enhanced,
+		colback=black!5!white,
+		boxrule=0.4pt,
+		colframe=black!65!black,
+		fonttitle=\bfseries
+	}
+	
+	\begin{overlayarea}{\textwidth}{.9\textheight}
+		\begin{columns}
+			\column{.4\textwidth}
+				\only<2-3>{
+					\vspace*{1.0cm}
+					\begin{tcolorbox}[drop lifted shadow, title=Deriva]
+						\begin{align*}
+							f&: \R^d \to \R^d, \\  
+							f&= 
+							\left(
+								f^{(1)}, \dots, f^{(d)}
+							\right),			
+						\end{align*}					
+					\end{tcolorbox}
+				}
+				
+			%
+			\column{.4\textwidth}
+				\only<3>{
+					\begin{tcolorbox}[drop lifted shadow, title=Difusi\'on]
+						\begin{align*}
+							g&: \R^d \to \R^{d \times m},\\
+							g&= 
+								\left(
+									g^{(i,j)}
+								\right)_{
+									\substack{
+										i \in \{1,\dots, d\}\\
+										j \in \{1,\dots, m\}
+									}
+								}  \\
+							W &= \left(
+							W^{(1)}, \dots, W^{(m)}				
+							\right)					
+						\end{align*}
+					\end{tcolorbox}
+				}
+		\end{columns}
+		%
+		
+		
+		\only<4->{
+			\begin{tcolorbox}[title=Hip\'otesis]
+				\begin{itemize}		
+				 \item[forma:]<4->
+					\textcolor{black}{
+						\textcolor<4>{red}{
+							$f^{(j)}(x) = a_j(x) x^{(j)} + b_j (x^{(-j)})$,
+						}\qquad
+						\textcolor<5>{red}{
+						$a_j,b_j \in \calC^{1}(\R^d)$ 
+						}
+					}
+				 \item[(EU-1)]<6-> 
+					\structure{Lipschitz Local} 
+					\qquad
+					\textcolor{black}{
+						\only<6->{
+							\textcolor<6-9>{cyan}{
+								$\forall R>0$,   
+							}
+						}
+						\only<7->{
+							\textcolor<7-9>{cyan}{
+								\  $\exists L_f=L_f(R)>0$
+							}
+						}
+						%\vspace*{-0.4cm}
+						\only<8->{
+							\textcolor<8-9>{red}{
+								$
+									|f(u)-f(v)|^2
+									\leq L_{f}|u-v|^2 
+								$								
+							}		
+						}
+						\only<9->{
+							\qquad 
+							\textcolor<9>{cyan}{
+								$\forall \ u,v \in \R^d,  |u|\vee|v|\leq R$
+							}						
+						}
+					}
+					%\vspace*{.4cm}
+				\item[(EU-2)]<10->
+					\textcolor{black}{
+						\structure{Lipschitz Global}				
+						\only<10->{
+							\qquad
+							\textcolor<10-12>{cyan}{
+								$\exists L_g>0$
+							} 
+						}
+						\only<11->{
+							\\
+							\textcolor<11-12>{red}{
+								$|g(u)-g(v)|^2 \leq L_{g}|u-v|^2,$
+							}
+						}
+						\only<12->{
+							\qquad
+							\textcolor<12>{cyan}{
+								$ \forall u,v \in \R^d.$
+							 } 
+						}
+					}
+				\item[(EU-3)]<13->
+					\textcolor{black}{
+						\structure{Monoton\'ia}
+						\only<14->{ 
+							\textcolor<14-16>{cyan}{
+								$\exists$ $\alpha$, $\beta>0$
+							}
+						}
+						\only<15>{
+						\\
+							\textcolor<15>{red}{
+								$
+									\innerprod{u}{f(u)} +\frac{1}{2}|g(u)|^2
+									\leq \alpha +\beta |u|^2, 
+								$
+							}							
+						}						
+						\only<16->{
+							\\								
+							\textcolor<16-17>{red}{
+								$
+									\innerprod{u}{f(u)}+\frac{p-1}{2}|g(u)|^2 
+									\leq \alpha + \beta |u|^2,
+								$
+							}						
+						}
+						\only<17->{
+							\qquad
+							\textcolor<17>{cyan}{
+								$\forall u \in \R^d.$
+							}					
+						}
+					}		
+				\end{itemize}
+			\only<18->{			
+				\tcblower				
+				$
+					\Rightarrow
+				$
+				\hyperlink{ExistenciaMao}{				
+					\beamerbutton{				
+						$
+						\exists ! \ y(t)				
+						$
+					}
+				}			
+			}		
+		\end{tcolorbox}
+	}
+	\end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[label=Construccion]
+	\frametitle{Construcci\'on}    
+	\begin{overlayarea}{\textwidth}{.1\textheight}
+		\vspace*{-.3cm}
+		\begin{empheq}[box=\shadowbox]{align*}
+			dy(t) &= f(y(t)) dt + g(y(t)) dW_t, \quad   
+			f^{(j)}(x) = a_j(x)  x^{(j)} + b_j (x^{(-j)})
+		\end{empheq}
+	\end{overlayarea}
+	\begin{overlayarea}{\textwidth}{.4\textheight}
+		\begin{columns}
+			\column{.6\textwidth}
+				\begin{tcolorbox}[
+					enhanced,
+					title=\only<1-2>{
+						$
+							f(y(t)) 
+							\approx 
+							\varphi_{f}(
+								y(
+								t_{\eta_{+}(t)}))
+						$
+					}
+					\only<3->{
+						$
+							%\varphi_{f}(Y_k^{\star})=
+								\left(
+									\varphi_{f^{(1)}}(Y_k^{\star}),
+										\ldots,
+									\varphi_{f^{(d)}}(Y_k^{\star})
+								\right)
+						$
+					},
+					coltitle=green!25!black,	
+					attach boxed title to top center={yshift*=-3mm},
+					boxed title style={colframe=green!75!black,colback=yellow!50!green}
+					%boxed title style={size=small,colback=green!40}
+				]
+					\only<1>{
+						\vspace*{-.3cm}
+						\begin{align*}
+							\eta(t) &:=
+								k,\  t\in [t_k, t_{k+1}), \quad k\geq 0,\\
+							\eta_{+}(t) &:= 
+								k+1,\  t\in [t_k, t_{k+1}), \quad k\geq 0
+						\end{align*}
+					}
+					\vspace*{-0.5cm}
+					\only<1-2>{
+						\begin{align*}
+							\varphi_{f}(y(t_{\eta_{+}(t)})) &=
+								\frac{y(t_{\eta_+(t)})-y(t_{\eta (t)})}
+								{ 
+									\int_{
+										\textcolor<2>{red}{
+											y(t_{\eta(t)})
+										}
+									}^{y(t_{\eta_+(t)})}
+										\frac{du}
+										{
+											\textcolor<2>{red}{
+												a(y(t_{\eta(t)}))
+											}u
+											+b
+										} 
+								}				
+						\end{align*}
+					}
+					\only<3-4>{
+						\vspace*{.25cm}
+						$
+							a_{j,k} =a_j
+								\left(
+									Y^{(1)}_{k},
+									\ldots, Y^{(d)}_{k}
+								\right)
+						$,
+						\\
+						$
+							b_{j,k} =
+							b_{j}
+							\left(
+								Y^{(-j)}_k
+							\right)		
+						$\\
+					}
+					\only<4->{
+						\vspace*{.25cm}
+						$
+							\varphi_{f^{(j)}}\left(Y_k^{\star}\right)
+							=
+							\frac{Y_{k}^{\star(j)}-Y_{k}^{(j)}}
+							{
+								\int_{Y_{k}^{(j)}}^{Y_{k}^{\star(j)}}
+								\frac{du}
+								{
+									a_{j,k} u
+									+b_{j,k}
+								}	
+							}	
+						$
+					}
+				\end{tcolorbox}
+			\column{.5\textwidth}
+				\vspace*{-1cm}
+				\only<5->{
+					\begin{align*}
+						Y_k^{\star} &= Y_k + h \varphi_f(Y^{\star}_k),\\
+						Y_{k+1}	&= Y_k^{\star} + g(Y_k^{\star})\Delta W_k,
+					\end{align*}
+				}
+
+		\end{columns}
+	\end{overlayarea}
+		\begin{columns}
+			\column{.5\textwidth}
+				\begin{overlayarea}{\textwidth}{.5\textheight}
+					\only<6->{
+						\textcolor{orange}{Hip\'otesis:}
+						$\forall x\in \R^d$
+						\begin{enumerate}[({A}-1)]
+							\item 
+							$
+							\exists \ L_a
+							$,
+							$
+							a_{j}(x) \leq L_a
+							$
+							\item 
+							$
+							|b_j(x^{(-j)})|^2 \leq L_{b}(1+|x|^2)
+							$
+							\item Condiciones
+							 \hyperlink{ZerosConditions}{\structure{ceros}} 
+							 de 
+							 $a_j(\cdot)$
+						\end{enumerate}
+					}
+				\end{overlayarea}
+			\column{.57\textwidth}
+				\begin{overlayarea}{\textwidth}{.5\textheight}
+					\only<6-11>{
+						\begin{Teorema}
+							\only<6>{
+								Sea $u\in\mathbb{R}^d$ 
+								\begin{align*}
+										v &= u + h \varphi_f(v), \\
+										v &= A^{(1)}(h,u)u +A^{(2)}(h,u) b(u).
+								\end{align*}
+								\hyperlink{MatrixFunctions}{\beamergotobutton{Def}}
+							}
+							\only<7->{
+								$v = A^{(1)}(h,u)u +A^{(2)}(h,u) b(u)$
+								\\
+								$F_h(u) = v$,
+									\   
+								$\varphi_{f_h}(u) =\varphi_{f}(F_h(u))$,
+								\\  
+								$g_h(u) = g(F_h(u))$,\\
+							}
+							\only<8-11>{
+								\textcolor<8>{orange}{
+									$\Rightarrow$ son local Lipschitz\\
+								}
+							}
+							\only<9-11>{
+								\textcolor<9>{orange}{
+									$\Rightarrow$
+									$
+										|\varphi_{f_h}(u)|\leq L_{\Phi} |f(u)|.	
+									$
+								}
+							}
+							\only<10-11>{
+								\\
+								\textcolor<10>{orange}{
+									$\Rightarrow$
+									$
+										\innerprod{\varphi_{f_h}(u)}{u}
+										\vee |g_h(u)|^2 \leq \alpha^* + \beta^* |u|^2 
+									$
+								}
+							}
+						\end{Teorema}
+					}
+					\only<12->{
+						\begin{tcolorbox}[title= M\'etodo Explícito]
+							\begin{align*}
+								&Y_k^{\star} = A^{(1)}(h,Y_k)Y_k + A^{(2)}(h,Y_k)b(Yk),\\
+								&Y_{k+1}	= Y_k^{\star} + g(Y_k^{\star})\Delta W_k,
+							\end{align*}
+						\end{tcolorbox}
+					}
+				\end{overlayarea}
+		\end{columns}
+\end{frame}
+
+
+
+
+

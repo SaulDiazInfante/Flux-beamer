@@ -1,0 +1,114 @@
+\begin{frame}[plain,noframenumbering]
+    \frametitle{Some representative schemes}    
+    \begin{columns}
+        \column{.3\textwidth}
+            \begin{itemize}
+                \item \structure<1-2>{\textbf{Implicite}:}
+                    \begin{itemize}[<+-| alert@+>]
+%                       \item
+%                           SSEM
+                        \item 
+                            $\theta$-BEM
+                        \item
+                            FBEM
+                    \end{itemize}
+                \item \structure<3-5>{\textbf{Explicit}:}
+                    \begin{itemize}[<+-| alert@+>]
+                        \item 
+                            Tamed EM 
+                        \item
+                            Truncated
+                        \item
+                            Sabanis
+                    \end{itemize}
+            \end{itemize}
+        \column{.8\textwidth}
+            \begin{overlayarea}{\textwidth}{.9\textheight}
+                \only<1>{
+                    \begin{bibunit}[alpha]
+                        \begin{block}{$\theta$-Euler Maruyama \nocite{Mao2013}}
+                            \begin{align*}
+                                Y_{k+1} &= Y_k + h(1-\theta)f(Y_{k}) + 
+                                \theta f(Y_{k+1}) +
+                                g(Y_k)\Delta W_k,
+                                \\ & \theta \in [0,1].
+                            \end{align*}
+                        \end{block}
+                        \biblio{PhdThesisBib.bib}
+                    \end{bibunit}
+                }
+                \only<2>{
+                    \begin{bibunit}[alpha]
+                        \begin{block}{Forward-Backward Euler Maruyama 
+                            \nocite{Mao2013}}
+                            \begin{align*}
+                                Y_{k} &= Y_{k-1} + h(1-\theta)f(Y_{k-1}) + 
+                                    \theta f(Y_{k}) +
+                                    g(Y_{k-1})\Delta W_{k-1}
+                                    \\ 
+                                \widehat{Y}_{k+1} &= \widehat{Y_k} + hf(Y_{k}) 
+                                + 
+                                g(Y_k)\Delta W_k,
+                                \qquad \theta \in [0,1].
+                            \end{align*}
+                        \end{block}
+                        \biblio{PhdThesisBib.bib}
+                    \end{bibunit}
+                }
+                \only<3>{
+                    \begin{bibunit}[alpha]
+                        \begin{block}{Tamed Euler Maruyama 
+                            \nocite{Hutzenthaler2012a}}
+                            \begin{align*}
+                                Y_{k+1} &= Y_k + \frac{h f(Y_{k})}{1 +h 
+                                \|f(Y_k)\|} + 
+                                g(Y_k)\Delta W_k
+                            \end{align*}
+                        \end{block}
+                        \biblio{PhdThesisBib.bib}
+                    \end{bibunit}
+                }
+                \only<4>{
+                    \begin{bibunit}[alpha]
+                        \begin{block}{Truncated Euler Maruyama \nocite{Mao2015}}
+                            \begin{align*}
+                                Y_{k+1} &= Y_k + f_{\Delta}(Y_k) h + 
+                                g_{\Delta}(Y_k)\Delta_{k},\\
+                                f_{\Delta}(x)&:=
+                                    \left(
+                                        |x|\wedge 
+                                        \mu^{-1}(h(\Delta))\frac{x}{|x|}
+                                    \right),\\
+                                g_{\Delta}(x)&:=
+                                    \left(
+                                        |x|\wedge 
+                                \mu^{-1}(h(\Delta))\frac{x}{|x|}
+                                    \right)
+                            \end{align*}
+                        \end{block}
+                        \biblio{PhdThesisBib.bib}
+                    \end{bibunit}
+                }
+                \only<5>{
+                    \begin{bibunit}[alpha]
+                        \begin{block}{Euler Maruyama with varying coefficients 
+                            \nocite{Sabanis2015}}
+                            \begin{align*}
+                                Y_{k+1} &= Y_k + 
+                                    \frac{h f(Y_{k}) + g(Y_k)\Delta W_k }
+                                    {
+                                        1 +k^{-\alpha} 
+                                        \left(
+                                            \|f(Y_k)\|
+                                            +\|g(Y_k)\|
+                                        \right)
+                                    },
+                                    \quad \alpha \in (0,1/2]  
+                            \end{align*}
+                        \end{block}
+                        \biblio{PhdThesisBib.bib}
+                    \end{bibunit}
+                }
+            \end{overlayarea}
+    \end{columns}
+\end{frame}

@@ -1,0 +1,1121 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy}
+\usepackage{empheq}
+\usepackage{lipsum}
+\usepackage{sectsty}
+\usepackage{bbm}
+\usepackage{asymptote}
+\usepackage[sectionbib]{natbib}
+\usepackage[amssymb]{SIunits}
+\allsectionsfont{\centering \normalfont\scshape}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor} % [dvipsnames]
+\definecolor{halfgray}{gray}{0.55}
+% chapter numbers will be semi transparent .5.55 .6 .0
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\definecolor{Maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{RoyalBlue}{cmyk}{1, 0.50, 0, 0}
+\definecolor{Black}{cmyk}{0, 0, 0, 0}
+\hypersetup{%
+    colorlinks=true, linktocpage=true, pdfstartpage=1, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for
+%printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3,
+%pdfstartview=FitV,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true,
+pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true,
+bookmarksopenlevel=1,%
+    hypertexnames=true,
+pdfhighlight=/O,hyperfootnotes=true,nesting=true,frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen,
+pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    %pdftitle={\myTitle},%
+    %pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+hyperfigures=ture,
+pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+   }
+%\usepackage{multienum}
+\usepackage{multicol}
+\usepackage{paralist}
+\usepackage{pifont}
+\usepackage{sistyle}
+\usepackage{chngpage}
+\usepackage{algorithm2e}
+\usepackage{enumerate}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[labelfont=bf,textfont={sl,bf},lofdepth,lotdepth]{subfig}
+%\DeclareCaptionListOfFormat{colon}{#2:}
+\usepackage{fixltx2e}
+%\captionsetup[subtable]{listofformat=colon,listofnumwidth=1.5em,
+% listofindent=3.8em}
+\newcommand{\figbox}[1]{%
+  \fbox{%
+    \vbox to 1in{%
+    \vfil
+    \hbox to 2in{%
+      \hfil
+      #1%
+      \hfil}%
+    \vfil}}
+}
+\makeatletter
+  \newcommand{\setcaptype}[1]{%
+    \listsubcaptions
+    \renewcommand{\@captype}{#1}
+  }
+  \renewcommand\abstract[1]{%
+    \def\@abstract{%
+      \centerline{{\large\bf Abstract}}
+      \noindent
+      #1}
+  }
+%   \renewcommand\@maketitle{%
+%     \newpage
+%     \null\vfil
+%     \vskip 60\p@
+%     \begin{center}%
+%       {\LARGE \@title \par}%
+%       \vskip 3em%
+%       {\large
+%        \lineskip .75em%
+%        \begin{tabular}[t]{c}%
+%          \@author
+%        \end{tabular}\par}%
+%       \vskip 1.5em%
+%       {\large \@date \par}%
+%     \end{center}%
+%     \vskip 2.5em%
+%     \@abstract
+%     \vfil\null}%
+\makeatother
+%\usepackage{bibunits}
+\newtheorem{theorem}{Teorema}
+\newtheorem{definition}{Definici\'on}
+\newtheorem{notation}{Afirmaci\'on}
+\newtheorem{lemma}{Lema}
+\setcounter{figure}{0}
+%\setcounter{table}{1}
+\parindent=0 in
+\parskip=.25 in
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\floatpagefraction}{0.35}
+\addto\extrasspanish{%%
+\def\sectionautorefname{secci\'on}%
+\def\subsectionautorefname{subsecci\'on}%
+\def\chapterautorefname{cap\'itulo}%
+\def\figureautorefname{figura}%
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\setlength\parindent{0pt}
+\setlength\parskip{5pt}
+%-----------------------------------------------------------------------------
+%
+%	TITLE SECTION
+%_----------------------------------------------------------------------------
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+ \setcounter{section}{2}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Auxiliar"
+\pdf_author "Saul"
+\pdf_subject "La que sea"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 1in
+\bottommargin 0.25in
+\headheight 1in
+\headsep 1in
+\footskip 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Ecuaciones para Consistencia y Estabilidad en Media Cuadratíca.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}[Solución asintotica p-estable]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X_t^{t_0}$ una la solución de la EDE.
+\end_layout
+
+\begin_layout Plain Layout
+
+	$X_t^{t_0}$ es asíntotica p-estable si y sólo si
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+lim_{t
+\backslash
+to 
+\backslash
+infty} |X_t^{t_0}|^p =0 
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+Necesitare el siguiente resultado.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}[Desigualdad de Jenssen]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X$ una v.a.
+ integrable, $
+\backslash
+mathcal{F}$ una $
+\backslash
+sigma-$ álebra
+\end_layout
+
+\begin_layout Plain Layout
+
+	y $
+\backslash
+varphi:
+\backslash
+mathbb{R}
+\backslash
+to 
+\backslash
+mathbb{R}$ una función convexa.
+\end_layout
+
+\begin_layout Plain Layout
+
+	Entonces
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\backslash
+varphi(
+\backslash
+mathbb{E}(|X|)) 
+\backslash
+leq
+\backslash
+mathbb{E}(|
+\backslash
+varphi(X)|).$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resulta inmediato el notar que esta última desigualdad se invierte si consideram
+os una función concava.
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}[Martingala]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sea $X_t$ un p.e.
+ y $
+\backslash
+mathcal{F_t}$ la filtración generado por este 	proceso.
+ $X_t$ Es Martingala si 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{enumerate}[(i)]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item $
+\backslash
+displaystyle 
+\backslash
+mathbb{E}(X_t)<
+\backslash
+infty 
+\backslash
+qquad 
+\backslash
+forall t$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+item $ 
+\backslash
+mathbb{E}(X_{t+s}|
+\backslash
+mathcal{F}_{s})=X_s$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\begin_layout Plain Layout
+
+	Bajo las hipóteis del teorema de existencia y unicidad para soluciones
+ fuertes de EDEs.
+ Si $Y^{
+\backslash
+delta}$ es consitente entonces $Y^{
+\backslash
+delta}$ converge en setido fuerte al proceso de It
+\backslash
+^{o} $X_t$.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prueba
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $0\leqq s\leq t\leq T$
+\end_inset
+
+ definimos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z(t):=\sup_{0\leq s\leq t}\mathbb{E}(|Y_{n_{s}}^{\delta}-X_{s}|^{2}),\qquad n_{t}:=\max\left\{ n=0,1,\ldots:t_{n}\leq t\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando el lado derecho de la EDE y el sentido de integral se tiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Z(t) & =\mathbb{E}(|\sum_{n=0}^{n_{s}-1}(y_{n+1}^{\delta}-y_{n}^{\delta})-\int_{0}^{s}a(X_{r})dr-\intop_{0}^{s}b(x_{r})dB_{r}|^{2})\\
+ & \leq C_{1}\sup_{0\leq s\leq t}\left\{ \mathbb{E}(|\sum_{n=0}^{n_{s}-1}(y_{n+1}^{\delta}-y_{n}^{\delta}|\mathit{A_{\tau_{n}}})-a(Y_{n}^{\delta})\Delta_{n}|^{2})\right\} \\
+ & +\mathbb{E}(|Y_{n+1}^{\delta}-Y_{n}^{\delta}-\mathbb{E}(y_{n+1}^{\delta}-y_{n}^{\delta}|\mathit{A_{\tau_{n}}})-b(Y_{n}^{\delta})B_{n}|^{2})\\
+ & +\mathbb{E}(|\int_{0}^{\tau_{n_{s}}}a(Y_{n_{r}}^{\delta})-a(X_{r})dr|^{2})\\
+ & +\mathbb{E}(|\int_{0}^{\tau_{n_{s}}}b(Y_{n_{r}}^{\delta})-b(X_{r})dB_{r}|^{2})\\
+ & +\mathbb{E}(|\int_{\tau_{n_{s}}}^{\text{s}}a(X_{r})dr|^{2})+\mathbb{E}(|\int_{\tau_{n_{s}}}^{s}a(X_{r})dr|^{2})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teorema de existencia y unicidad para EDEs
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $dX_{t}=a(t,X_{t})dt+b(t,X_{t})dW_{t}$
+\end_inset
+
+ una EDE en el sentido de It^o.
+ Si los coeficientes son
+\end_layout
+
+\begin_layout Enumerate
+(Medibles): 
+\begin_inset Formula $a,b$
+\end_inset
+
+ son 
+\begin_inset Formula $\mathcal{L}^{2}-$
+\end_inset
+
+medibles en 
+\begin_inset Formula $(t,x)\in[t_{0},T]\times\mathbb{R}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+(Lipschitz): 
+\begin_inset Formula $\exists K>0$
+\end_inset
+
+ t.q 
+\begin_inset Formula $|a(t,x)-a(t,y)|\leq K|x-y|$
+\end_inset
+
+, 
+\begin_inset Formula $|b(t,x)-b(t,y)|\leq K|x-y|$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t\in[t_{0},T],\quad x,y\in\mathbb{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+(De crecimiento lineal acotado): 
+\begin_inset Formula $\exists K>0$
+\end_inset
+
+ t.q 
+\begin_inset Formula $|a(t,x)|^{2}\leq K^{2}(1+|x|^{2})$
+\end_inset
+
+, 
+\begin_inset Formula $|b(t,x)|^{2}\leq K^{2}(1+|x|^{2})$
+\end_inset
+
+
+\begin_inset Formula $\forall t\in[t_{0},T],\quad x\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+(Condición inicial) : 
+\begin_inset Formula $X_{t_{0}}$
+\end_inset
+
+es 
+\begin_inset Formula $\mathcal{A}_{t_{0}}-$
+\end_inset
+
+medible con 
+\begin_inset Formula $\mathbb{E}(|X_{t_{0}}|)<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Bajo dichas condiciones, existe solución fuerte única 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ en 
+\begin_inset Formula $[t_{0},T]$
+\end_inset
+
+con
+\begin_inset Formula 
+\[
+\sup_{t_{0}\leq t\leq T}\mathbb{E}(|X_{t}|^{2})<\infty.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lema de Gronwall
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}[de Gronwall]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Sean $
+\backslash
+alpha,
+\backslash
+beta:[t_0,T]
+\backslash
+to
+\backslash
+mathbb{R}$ funciones integrables t.q.
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+		0
+\backslash
+leq 
+\backslash
+alpha(t)
+\backslash
+leq 
+\backslash
+beta(t) +L 
+\backslash
+int_{t_0}^{t}
+\backslash
+alpha(s)ds 
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+qquad t
+\backslash
+in[t_0,T].
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+	Entonces 
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+alpha(t)
+\backslash
+leq 
+\backslash
+beta(t)+L
+\backslash
+int_{t_0}^{t} e^{L(t-s)}
+\backslash
+beta(s)ds
+\end_layout
+
+\begin_layout Plain Layout
+
+	$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}[Unicidad de soluciones]
+\end_layout
+
+\begin_layout Plain Layout
+
+	Si (A1) y (A2) se cumplen, entonces las solución de la EDE correspondientes
+ a un mismo valor inicial y al mismo proces de Wiener son unicas por trayectoria
+s.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Prueba
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $X_{t},Y_{t}$
+\end_inset
+
+ dos soluciones de la (EDE) en 
+\begin_inset Formula $[t_{0},T]$
+\end_inset
+
+ con trayectorias continuas c.s..
+ Dado que estas soluciones pueden tener segundos momentos no acotados, procedere
+mos usando el un proceso de truncamiento.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $N>0$
+\end_inset
+
+ y 
+\begin_inset Formula $t\in[t_{0},T]$
+\end_inset
+
+ definamos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{t}^{(N)}(\omega):=\begin{cases}
+1 & \left|X_{u}\right|,\left|Y_{u}\right|\leq N\\
+0 & o.c.
+\end{cases}\quad t_{0}\leq u\leq t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Claramente 
+\begin_inset Formula $I_{t}^{(N)}(\omega)$
+\end_inset
+
+ es 
+\begin_inset Formula $\mathcal{A}_{t}-$
+\end_inset
+
+medible 
+\begin_inset Formula $I_{t}^{(N)}=I_{t}^{(N)}I_{s}^{(N)}\qquad0\leq t\leq s$
+\end_inset
+
+ .
+ Por ello las siguientes integrales tienen sentido
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+Z_{t}^{(N)} & =I_{t}^{(N)}\intop_{t_{0}}^{t}I_{s}^{(N)}(a(s,X_{s})-a(s,Y_{s}))ds+\nonumber \\
+ & I_{t}^{(N)}\intop_{t_{0}}^{t}I_{s}^{(N)}(b(s,X_{s})-b(s,Y_{s}))dW_{s}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado que 
+\begin_inset Formula $a,b$
+\end_inset
+
+ son Lipschitz se tiene para 
+\begin_inset Formula $t_{0}\leq s\leq t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\max\left\{ \left|I_{s}^{(N)}\left(a(s,X_{s})-a(s,Y_{s})\right)\right|,\left|I_{s}^{(N)}\left(b(s,X_{s})-b(s,Y_{s})\right)\right|\right\} \\
+\leq & KI_{s}^{(N)}\left|X_{s}-Y_{s}\right|\\
+\leq & 2NK.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, el segundo momento de 
+\begin_inset Formula $Z_{t}^{(N)}$
+\end_inset
+
+ existe y por lo tanto la integral en (1).
+ Usando
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a+b)^{2}\leq2(a^{2}+b^{2})$
+\end_inset
+
+ resulta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}\left(\left|Z_{t}\right|^{2}\right) & \leq2\mathbb{E}\left(\left|\int_{t_{0}}^{t}I_{s}^{(N)}\left(a(s,X_{s})-a(s,Y_{s})\right)ds\right|^{2}\right)\\
+ & +2\mathbb{E}\left(\left|\int_{t_{0}}^{t}I_{s}^{(N)}\left(b(s,X_{s})-b(s,Y_{s})\right)dW_{s}\right|^{2}\right)\\
+ & \leq2(T-t_{0})\int_{t_{0}}^{t}\mathbb{E}\left(\left|I_{s}^{(N)}\left(a(s,X_{s})-a(s,Y_{s})\right)\right|^{2}ds\right)\\
+ & +2\int_{t_{0}}^{t}\mathbb{E}\left(\left|I_{s}^{(N)}\left(b(s,X_{s})-b(s,Y_{s})\right)\right|^{2}ds\right)\\
+ & \leq2(T-t_{0})K^{2}\int_{t_{0}}^{t}\mathbb{E}\left(\left|X_{s}-Y_{s}\right|^{2}ds\right)\\
+ & +K^{2}\int_{t_{0}}^{t}\mathbb{E}\left(\left|X_{s}-Y_{s}\right|^{2}ds\right)\\
+ & 2(T-t_{0}+1)K^{2}\int_{t_{0}}^{t}\mathbb{E}\left(\left|X_{s}-Y_{s}\right|^{2}ds\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $L=2(T-t_{0}+1)K^{2}$
+\end_inset
+
+ entonces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}\left(\left|Z_{t}^{(N)}\right|^{2}\right)\leq L\int_{t_{0}}^{t}\mathbb{E}\left(\left|Z_{s}\right|^{2}ds\right)\quad t\in[t_{0},T].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto el lema de Gronwall con 
+\begin_inset Formula $\alpha(t)=\mathbb{E}\left(\left|Z_{t}^{(N)}\right|^{2}\right),\beta(t)=0$
+\end_inset
+
+ implica que 
+\begin_inset Formula $\mathbb{E}\left(\left|Z_{t}^{(N)}\right|^{2}\right)=0$
+\end_inset
+
+.
+ En consecuencia, c.p.1 
+\begin_inset Formula $I_{t}^{(N)}X_{t}=I_{t}^{(N)}Y_{t},\quad t\in[t_{0},T]$
+\end_inset
+
+.
+ Al ser 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $I_{t}^{(N)}X_{t},I_{t}^{(N)}Y_{t}$
+\end_inset
+
+ continuas y acotadas c.s.
+ en 
+\begin_inset Formula $[t_{0},T]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\[
+0\leq\mathbb{P}\left(X_{t}\neq Y_{t}\quad\forall t\in[t_{0},T]\right)\leq\mathbb{P}(\sup_{t_{0}\leq t\leq T}\left|X_{t}\right|>N)+\mathbb{P}(\sup_{t_{0}\leq t\leq T}\left|Y_{t}\right|>N)\xrightarrow{N\to\infty}0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Entonces 
+\begin_inset Formula $\mathbb{P}(X_{t}\neq Y_{t})=0,\quad\forall t\in[t_{0},T]$
+\end_inset
+
+.
+ Luego 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathbb{P}(X_{t}\neq Y_{t}:t\in D)$
+\end_inset
+
+ con 
+\begin_inset Formula $D$
+\end_inset
+
+ subconjunto denso y contable de 
+\begin_inset Formula $[t_{0},T].$
+\end_inset
+
+Pero dado que 
+\begin_inset Formula $X_{t},Y_{t}$
+\end_inset
+
+ son continuas y acotadas c.s.
+ y coinciden en 
+\begin_inset Formula $D$
+\end_inset
+
+, estas deben coinsidir c.s.
+ en 
+\begin_inset Formula $[t_{0},T].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Martingalas
+\end_layout
+
+\begin_layout Section
+Desigualda de Jenssen
+\end_layout
+
+\begin_layout Section
+Consistencia implica Convergencia.
+\end_layout
+
+\begin_layout Standard
+Prueba
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $0\leq t\leq T$
+\end_inset
+
+ sea 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z(t):=\sup_{0\leq s\leq t}\mathbb{E}\left(\left|Y_{n_{s}}-X_{s}\right|^{2}\right)\quad n_{t}\max\left\{ n:\tau_{n}\leq t\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando una suma telescópica se tiene
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Z(t):= & \sup_{0\leq s\leq t}\mathbb{E}\left(\left|\sum_{n=0}^{n_{s}-1}\left(Y_{n+1}^{h}-Y_{n}^{h}\right)-\intop_{0}^{s}a\left(X_{r}\right)dr-\intop_{0}^{s}b\left(X_{r}\right)dB_{r}\right|^{2}\right)\\
+\leq & C_{1}\sup_{0\leq s\leq t}\left\{ \right)\mathbb{E}\left(\left|\sum_{n=0}^{n_{s}-1}\mathbb{E}\left(Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}\right)-a\left(Y_{n}^{h}\right)h\right|^{2}\right)\\
+ & +\mathbb{E}\left(\left|\sum_{n=0}^{n_{s}-1}\left(Y_{n+1}^{h}-Y_{n}^{h}\right)-\mathbb{E}\left(Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}\right)-b\left(Y_{n}^{h}\right)\Delta B_{n}\right|^{2}\right)\\
+ & +\mathbb{E}\left(\left|\int_{0}^{\tau_{n_{s}}}a\left(Y_{n_{r}}^{h}\right)-a\left(X_{r}\right)dr\right|^{2}\right)\\
+ & +\mathbb{E}\left(\left|\int_{0}^{\tau_{n_{s}}}b\left(Y_{n_{r}}^{h}\right)-b\left(X_{r}\right)dW_{r}\right|^{2}\right)\\
+ & +\mathbb{E}\left(\left|\int_{\tau_{n_{s}}}^{s}a\left(X_{r}\right)\right|^{2}dr\right)+\mathbb{E}\left(\left|\int_{\tau_{n_{s}}}^{s}b\left(X_{r}\right)\right|^{2}dB_{r}\right)\\
+ & \}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando las propiedades de los coeficientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+Z(t)\leq C_{1}\sup_{0\leq s\leq t}\{Th\sum_{n=0}^{n_{s}-1}\mathbb{E}\left(\left|\mathbb{E}\left(\frac{Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}}{h}\right)-a\left(Y_{n}^{h}\right)\right|^{2}\right)\\
++\mathbb{E}\left(\left|\sum_{n=0}^{n_{s}-1}\left(Y_{n+1}^{h}-Y_{n}^{h}\right)-\mathbb{E}\left(Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}\right)-b\left(Y_{n}^{h}\right)\Delta B_{n}\right|^{2}\right)\\
++K^{2}T\mathbb{E}\left(\int_{0}^{\tau_{n_{s}}}\left|Y_{n_{r}}^{h}-X_{r}\right|^{2}dr\right)+K^{2}\mathbb{E}\left(\int_{0}^{\tau_{n_{s}}}\left|Y_{n_{r}}^{h}-X_{r}\right|^{2}dr\right)\\
++K^{2}T\mathbb{E}\left(\int_{0}^{\tau_{n_{s}}}1+\left|X_{r}\right|^{2}dr\right)+K^{2}\mathbb{E}\left(\int_{0}^{\tau_{n_{s}}}1+\left|X_{r}\right|^{2}dr\right)\\
+K^{2}T\mathbb{E}\left(\int_{\tau_{n_{s}}}^{s}1+\left|X_{r}\right|^{2}dr\right)+K^{2}\mathbb{E}\left(\int_{\tau_{n_{s}}}^{s}1+\left|X_{r}\right|^{2}dr\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+Z(t)\leq C_{1}\sup_{0\leq s\leq t}\{Th\sum_{n=0}^{n_{s}-1}\mathbb{E}\left(\left|\mathbb{E}\left(\frac{Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}}{h}\right)-a\left(Y_{n}^{h}\right)\right|^{2}\right)\\
++\mathbb{E}\left(\left|\sum_{n=0}^{n_{s}-1}\left(Y_{n+1}^{h}-Y_{n}^{h}\right)-\mathbb{E}\left(Y_{n+1}^{h}-Y_{n}^{h}|\mathcal{A}_{\tau_{n}}\right)-b\left(Y_{n}^{h}\right)\Delta B_{n}\right|^{2}\right)\\
++K^{2}(1+T)\int_{0}^{\tau_{n_{s}}}Z(r)dr+K^{2}(1+T)(1+C_{2})h
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z(t)\leq C_{3}\int_{0}^{\tau_{n_{s}}}Z(r)dr+C_{4}(h+c(h))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lema de Gronwall
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Z(t) & \leq C_{4}(h+c(h))e^{\left(\int_{0}^{\tau_{n_{s}}}C_{3}dr\right)}\\
+Z(t) & \leq C_{5}(h+c(h))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

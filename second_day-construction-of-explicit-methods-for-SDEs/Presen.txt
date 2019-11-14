@@ -1,0 +1,40 @@
+Motivacion.
+	Apertura con Aplicaciones (Falta Montecarlo)
+		Dinamica Browniana y Montecarlo. 
+		Ventajas y desvantajas del EM (Listo).
+		EM  paso muy chiqito. (Listo)
+		Condiciones Locales y Globales. (Listo)
+		Objetivo. (Listo)
+		39
+			Cambiar titulo:
+				Extension al caso vectorial.
+		
+					
+		Metodologia:
+			Primer Paso Steklov (scalares)
+				Inidce.
+					Teoria clasica y estabilidad.
+					Justificar por que usar Steklov.
+			Segundo Paso.
+				Indice
+					Construccion		
+Templates (Two Columns)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{bibunit}[alpha]
+	\begin{frame}
+		\frametitle{}    
+		\begin{columns}
+			\column{.5\textwidth}
+			
+			\column{.5\textwidth}
+		\end{columns}
+		\biblio{PhdThesisBib.bib}
+	\end{frame}
+\end{bibunit}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{empheq}[box={\Garybox[EDE]}]{equation*}
+	dy(t) = f(y(t)) dt + g(y(t)) dW_t, \quad Y_0=y_0  \tag{EDE}
+\end{empheq}	

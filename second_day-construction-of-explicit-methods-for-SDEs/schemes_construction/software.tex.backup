@@ -1,0 +1,12 @@
+\begin{frame}{ SDE solvers}
+    \item Julia
+        http://docs.juliadiffeq.org/latest/
+    \item
+        https://pythonhosted.org/StochPy/userguide_doc.html#installation
+    \item
+        https://www.rdocumentation.org/packages/sde/versions/2.0.15    
+    \item
+        https://rdrr.io/cran/sde/src/R/sde.sim.R
+    \item
+        M
+ \end{frame}

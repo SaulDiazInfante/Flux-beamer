@@ -1,0 +1,208 @@
+\documentclass[spanish,10pt,xcolor=dvipsnames,table]{beamer}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{ucs}
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{trace}
+\usepackage{bibunits}
+\usepackage[amssymb]{SIunits}
+\usepackage{sistyle}
+\usepackage{times}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{url}
+\usetheme{Oxygen}
+\usepackage{thumbpdf}
+\usepackage{wasysym}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{verbatim}
+\usepackage{multimedia}
+\usepackage{empheq}
+\usepackage{fancybox}
+\usepackage{epstopdf}
+\usepackage{proba}
+\usepackage{array,booktabs}
+\usetikzlibrary{arrows,shapes,automata,positioning}
+\theoremstyle{plain} % default
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}{Ejemplo}
+\theoremstyle{definition}
+\newtheorem{definicion}{Definici\'on}
+\newtheorem{Corolario}{Corolario}
+\newtheorem{Proposicion}{Proposici\'on}
+\newtheorem{lema}{Lema}
+\newtheorem{Prueba}{Prueba}
+\usepackage{esint}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+\def\Q#1#2{\frac{\partial #1}{\partial #2}}
+\usepackage{listings}
+\lstset{%
+	language=[AlLaTeX]TEX,%
+	float=hbp,%
+	basicstyle=\ttfamily\small, %
+	identifierstyle=\color{colIdentifier}, %
+	keywordstyle=\color{colKeys}, %
+	stringstyle=\color{colString}, %
+	commentstyle=\color{colComments}, %
+	columns=flexible, %
+	tabsize=3, %
+	frame=single, %
+	extendedchars=true, %
+	showspaces=false, %
+	showstringspaces=false, %
+	numbers=left, %
+	numberstyle=\tiny, %
+	breaklines=true, %
+	backgroundcolor=\color{hellgelb}, %
+	breakautoindent=true, %
+	captionpos=b,%
+	xleftmargin=18pt,%
+	xrightmargin=\fboxsep%
+}
+%------Fancy%boxes-------------------------------
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\definecolor{shadecolor}{cmyk}{0,0,0.41,0}
+\newcommand*\mybluebox[1]{%
+	\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}
+}
+\newcommand*\myyellowbox[1]{%
+	\colorbox{darkyellow}{\hspace{1em}#1\hspace{1em}}
+}
+\newcommand{\innerprod}[2]{\left\langle#1, #2\right\rangle}
+%%%%%%%%%%%Bibliography
+\defaultbibliography{BibliografiaTesis, PhdThesisBib}
+\defaultbibliographystyle{IEEEtran}
+
+%--------------------------------------------------------------------------
+\definecolor{shadecolor}{cmyk}{0,0,0.41,0}
+\definecolor{light-blue}{cmyk}{0.25,0,0,0}
+\newsavebox{\mysaveboxM} % M for math
+\newsavebox{\mysaveboxT} % T for text
+\newcommand*\Garybox[2][Example]{%
+	\sbox{\mysaveboxM}{#2}%
+	\sbox{\mysaveboxT}{\fcolorbox{black}{light-blue}{#1}}%
+	\sbox{\mysaveboxM}{%
+		\parbox[b][\ht\mysaveboxM+.5\ht\mysaveboxT+.5\dp\mysaveboxT][b]{%
+			\wd\mysaveboxM}{#2}%
+	}%
+	\sbox{\mysaveboxM}{%
+		\fcolorbox{black}{shadecolor}{%
+			\makebox[\linewidth-10em]{\usebox{\mysaveboxM}}%
+		}%
+	}%
+	\usebox{\mysaveboxM}%
+	\makebox[0pt][r]{%
+		\makebox[\wd\mysaveboxM][c]{%
+			\raisebox{\ht\mysaveboxM-0.5\ht\mysaveboxT
+				+0.5\dp\mysaveboxT-0.5\fboxrule}{\usebox{\mysaveboxT}}%
+		}%
+	}%
+}
+\newcommand\Fontvi{\fontsize{7}{7.2}\selectfont}
+\newcommand{\sign}{\text{sign}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{kugreen}{RGB}{50,93,61}
+\definecolor{kugreenlys}{RGB}{132,158,139}
+\definecolor{kugreenlyslys}{RGB}{173,190,177}
+\definecolor{kugreenlyslyslys}{RGB}{214,223,216}
+\definecolor{greenArea}{RGB}{124,252,124}
+\definecolor{hellmagenta}{rgb}{1,0.75,0.9}
+\definecolor{hellcyan}{rgb}{0.75,1,0.9}
+\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+\definecolor{darkyellow}{rgb}{1,0.9,0}
+\setbeamercovered{transparent}
+\mode<presentation>
+{  
+	%\usetheme{PaloAlto}
+	%\usecolortheme[named=kugreen]{structure}
+	\useinnertheme{progressbar}
+	%\usefonttheme{default}
+	\usefonttheme{serif}
+	%\setbeamercovered{transparent}
+	\setbeamertemplate{blocks}[rounded][shadow=true]
+	%s\setbeamertemplate{navigation symbols}[only frame symbol]
+}
+\setbeamertemplate{background}{
+	\parbox[c][\paperheight]{\paperwidth}
+	{
+		\vfill \hfill
+		\begin{tikzpicture}
+		\node[opacity=.1]
+		{
+			\includegraphics[width=.5\textwidth]{./Imagenes/Logo/CimatLogo.png}
+		};
+		\end{tikzpicture}
+		\vspace{.5cm} %\hspace{.5cm}
+	}
+}
+\logo{\includegraphics[width=1.5cm]{./Imagenes/Logo/Logo.png}}
+\title{Métodos Steklov para Ecuaciones Diferenciales Estocásticas {\tiny(RT)}.}
+%\subtitle{()}
+\author[]{Sa\'ul D\'iaz Infante Velasco \and Asesor: Dra.Silvia Jerez Galiano}
+\institute{CIMAT A.C.}
+\date\today
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>{}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+\tcbuselibrary{skins,breakable}
+\beamertemplatenavigationsymbolsempty 
+\begin{document}
+	\frame{\titlepage \vspace{-0.5cm}}
+	\section*{Introducci\'on}
+	\input{./Introduccion.tex}
+	\begin{frame}
+		\frametitle{Plan de Charla}
+		\tableofcontents[pausesections]
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Esquemas Steklov (EDEs escalares)}
+	\subsection{Constucci\'on}
+	\input{./SBD.tex}
+	\subsection{Consistencia y estabilidad}
+	\input{./Consistencia.tex}
+	\subsection{Estabilidad lineal}
+	\input{./EstabilidadLineal.tex}
+	\subsection{Resultados numéricos}
+	\input{./ResultadosNumericos.tex}
+	\section{Linear Steklov (EDEs vectoriales)}
+	\subsection{Construcci\'on}
+	\input{./ConstruccionLS.tex}
+	\subsection{Convergencia}
+	\input{HighamMaoStuartConvergence.tex}
+	\subsection{Resultados Numéricos}
+	\input{./NumericalResults.tex}
+	\section{Comentarios Finales}
+	\subsection{Conclusiones}
+	\input{./Conclusiones.tex}
+	\subsection{Perspectivas}
+	\input{./TrabajoFuturo.tex}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}[noframenumbering,plain,allowframebreaks]
+		\frametitle{Referencias}
+		\bibliographystyle{apalike}
+		\nocite{Buckwar2011a}
+		\nocite{Higham2002b}
+		\nocite{Mao2013}
+		\nocite{Hutzenthaler2015}
+		\bibliography{PhdThesisBib}
+	\end{frame}
+	\appendix
+	\part{Definiciones y resultados}
+	\input{./Appendice.tex}	
+\end{document}

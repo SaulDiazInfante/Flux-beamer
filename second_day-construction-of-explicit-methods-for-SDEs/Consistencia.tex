@@ -1,0 +1,172 @@
+\begin{bibunit}[apalike]
+  \begin{frame}%[label=frm:10]
+    \frametitle{Definiciones y resultados previos}
+	\nocite{KloedenPllaten}
+	\biblio{BibliografiaTesis}
+  \end{frame}
+\end{bibunit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Consistencia convergencia y estabilidad en sentido fuerte}
+	\vspace{-1.0cm}	
+	\begin{empheq}[box={\Garybox[EDE]}]{equation*}
+		dy(t) = f(y(t)) dt + g(y(t)) dW_t, \quad Y_0=y_0  \tag{EDE}
+	\end{empheq}		
+	\vspace{-.45cm}	
+	\begin{columns}
+		\column{.3\textwidth}
+			$Y^{h}$ 	esquema con paso 	 $\max h$.		
+		\column{.5\textwidth}
+		\begin{empheq}[box=\shadowbox]{equation*}
+			\varepsilon(h)= \mathbb{E}
+		  \left(
+		  	|y(T)-Y^{h}(T)|
+		  \right)
+		\end{empheq}		
+	\end{columns}	
+	\vspace{-.5cm}	
+	\begin{overlayarea}{\textwidth}{.7\textheight}
+	\only<+->{
+	  \begin{definicion}[Consistencia]
+		$Y^{h}$  a los	  tiempos
+		$
+		  \left(
+			\tau
+		  \right)_{h}=
+		  \left\{
+			\tau_{n}:n=0,1,\cdots
+		  \right\}
+		$
+		es \textcolor{red}{consistente en sentido fuerte},
+		si $\exists \ C=C(h)\geq 0,\quad h_0$ t.q. 
+		$\textcolor{red}{\forall Y_n^{h}},n=1,2,\dots, N, \quad h\in(0,h_0)$
+		\begin{itemize}[<+->]
+		  \item $\displaystyle \lim_{h\downarrow 0} C(h)=0$
+		  \item
+		  $
+			\displaystyle
+			 \mathbb{E}
+			  \left(
+				\left|
+				  \mathbb{E}
+				  \left(
+					\frac{Y_{n+1}^{h}-Y_n^{h}}{h}
+					  \left|
+						\mathcal{F}_{\tau_n}
+					  \right.
+				  \right)
+				-
+				\textcolor{red}{
+					f\left(
+						Y_{n}^{h}
+				  \right)
+			}
+				\right|^2
+			 \right)\leq C(h).
+		  $
+		  \item
+			\renewcommand{\arraystretch}{1.5}%
+			\scalebox{0.8}{% Scale by 50%
+			$
+			  \mathbb{E}
+			  \left(
+				\frac{1}{h}
+				\left|
+				Y_{n+1}^{h}-Y_{n}^{h}-
+				\mathbb{E}
+				\left(
+				  \frac{Y_{n+1}^{h}-Y_n^{h}}{h}
+					\left|
+					\mathcal{F}_{\tau_n}
+				\right.
+			  \right)
+			-
+			\textcolor{red}{
+				g\left(
+					Y_{n}^{h}
+				\right)
+			}
+			\Delta W_n
+			\right|^2
+		  \right)\leq C(h).
+		 $ }
+		\normalsize
+		\end{itemize}
+	  \end{definicion}
+		}
+	\end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%Convergencia%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Consistencia convergencia y estabilidad en sentido fuerte}
+	\vspace{-1.0cm}	
+	\begin{empheq}[box={\Garybox[EDE]}]{equation*}
+		dy(t) = f(y(t))dt + g(y(t)) dW_t, \qquad y_0=y(0)  %\tag{EDE}
+	\end{empheq}		
+	\vspace{-.45cm}	
+	\begin{columns}
+		\column{.3\textwidth}
+			$Y^{h}$ 	esquema con paso 	 $\max h$.		
+		\column{.5\textwidth}
+		\begin{empheq}[box=\shadowbox]{equation*}
+			\varepsilon(h)= \mathbb{E}
+		  \left(
+		  	|y(T)-Y^{h}(T)|
+		  \right)
+		\end{empheq}		
+	\end{columns}	
+	\vspace{-.5cm}	
+	\begin{overlayarea}{\textwidth}{.7\textheight}
+	 \only<+>{
+	  \begin{definicion}[Convergencia fuerte]
+		$Y^{h}$ \textcolor{red}{converge} en \textcolor{red}{sentido fuerte} a $y$ a tiempo $T$ si
+		\begin{equation*}
+		  \lim_{h \downarrow 0}
+		  \mathbb{E}
+		  \left(
+			  |y(T) - Y^{h}(T)|
+		  \right)=0
+		\end{equation*}
+	  \end{definicion}
+	  }
+	\only<+>{
+	  \begin{definicion}[orden de convergencia]
+		$Y^{h}$
+		\textcolor{red}{converge} en sentido fuerte \textcolor{red}{con orden $\gamma$},
+		 si $\exists \ C$
+		independiente de $h $ y $h_{0}$ t.q.
+		\begin{equation*}
+		  \epsilon(h)=
+		  \mathbb{E}
+		  \left(
+			|y(T)-Y(T)|
+			\right)\leq C h^{\textcolor{red}{\gamma}} \qquad\forall h\in (0,h_0).
+		\end{equation*}
+	  \end{definicion}
+	  }
+	\end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\frametitle{Consistencia convergencia y estabilidad en sentido fuerte}	
+	\hypertarget{thm:ConsistenciaConvergencia}{}	
+	%\vspace{-3.8cm}	
+	\begin{empheq}[box={\Garybox[EDE]}]{equation*}
+		dy(t) = f(y(t))dt + g(y(t)) dW_t, \qquad y_0= y(0) 
+	\end{empheq}
+	\begin{overlayarea}{\textwidth}{\textheight}
+ 	 \begin{Teorema}
+		Bajo las condiciones del teorema de
+		\hyperlink{thm:ExistenciaUnicidadEDE}{ \textbf{existencia y unicidad}} (Lipschitz globales)
+		para soluciones fuertes de (EDE). Si $Y^{h}$ es \textcolor{red}{consistente} entonces
+		$Y^{h}$ \textcolor{red}{converge} en sentido fuerte a la solución $y(t)$.
+  \end{Teorema}
+  \only<2->{
+  \begin{Teorema}
+	  Bajo las mismas hipótesis, el esquema Steklov converge. 
+	  %\only<3->{con \textcolor{red}{ orden \num{0.5}-$\epsilon$}}.
+  \end{Teorema}
+	}
+	\end{overlayarea}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

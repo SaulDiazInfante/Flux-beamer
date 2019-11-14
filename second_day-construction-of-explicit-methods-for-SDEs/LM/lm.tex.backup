@@ -1,0 +1,14 @@
+\begin{frame}{}
+    Let, $I_t = i$. Denote by $T_i$ the interevent time.
+    $H_i(t) \probX{T_i>t}$.
+    \begin{align*}
+        H_i(t + \Delta t) &= H_i(t) p_{ii}(\Delta t)
+        \\
+            &=H_i(t)(1 -(b(i) + d(i)) ) \Delta_t + o(\Delta t)
+        \\
+        \frac{H_i(t + \Delta t) - H_i(t)}{\Delta t } 
+            &= -(b(i)+d(i))
+    \end{align*}
+    Thus
+    
+\end{frame}

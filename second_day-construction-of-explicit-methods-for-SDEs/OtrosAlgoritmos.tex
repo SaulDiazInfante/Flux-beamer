@@ -1,0 +1,14 @@
+\begin{bibunit}[aalpha]
+  \begin{frame}\frametitle{Otros algoritmos para la ecuaci\'on de Langevin}
+    \frametitle{A segundo orden}
+    \begin{alertblock}{Runge-Kutta estocástico, SRK \cite{BrankaHeyes:1999}}
+      \begin{align*}
+        r_{i\alpha}(\Delta t)=&r_{i\alpha}+\frac{D}{2T}(F_{i\alpha}^a+F_{i\alpha}^b)\Delta t+W_{i\alpha}\\
+        \mathbf{F}_{i\alpha}^{a}=&\mathbf{F}_i(\mathbf{r}^N)\\
+        \mathbf{F}_{i\alpha}^{b}=&\mathbf{F}_i(\mathbf{R}^N)\\
+        \mathbf{R}_i=&\mathbf{r}_i+\left(\frac{D}{T}\right)\mathbf{F}_i\Delta t+\mathbf{W}_i
+      \end{align*}
+    \end{alertblock}
+    \biblio{BibliografiaPresentacion}
+  \end{frame}
+\end{bibunit}

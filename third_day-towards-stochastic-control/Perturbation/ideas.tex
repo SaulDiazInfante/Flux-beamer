@@ -1,0 +1,161 @@
+\begin{frame}[plain]
+    \frametitle{}
+    \only<1>{
+        \begin{bibunit}
+            \nocite{Jerez2018,Acuna-Zegarra2018}
+            \putbib
+        \end{bibunit}
+    }
+    \only<2>{
+        \begin{bibunit}
+            \nocite{Diaz-Infante2017a}
+            \putbib
+        \end{bibunit}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Perspectives}
+        \begin{textblock*}{50mm}(3mm, 18mm)
+            \begin{bluebox}{Modelos}
+                \begin{itemize}
+                        \item
+                            \textcolor<1>{orange}{
+                                Mean reverting processes
+                            }
+                        \item
+                            \textcolor<2>{orange}{
+                                $
+                                    \beta_t^H \ H \in (\num{.5}, 1)
+                                $
+                            }
+                        \item
+                            \textcolor<3>{orange}{
+                                Random Diff. Eq.
+                            }
+                        \item
+                            Random Dynamical Systems
+                \end{itemize}
+            \end{bluebox}
+        \end{textblock*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{textblock*}{72mm}(55mm, 18mm)
+           \begin{graybox}{
+                \only<1>{%
+                    $d
+                        \varphi_t =
+                        (\varphi_e - \varphi_t) dt
+                        + \sigma_\varphi dB_t
+                    $%
+                }%
+                \only<2>{
+                    Long time memory: fBM
+                }
+                \only<3>{%
+                    Parameters as r.v
+                }
+            }%
+                \only<1>{
+                    \begin{bibunit}[apalike]
+                        \nocite{Allen2016}
+                        \putbib
+                    \end{bibunit}
+                }
+                \only<2>{
+                    \begin{bibunit}[apalike]
+                        \nocite{Ma2017}
+                        \putbib
+                    \end{bibunit}
+                }
+                \only<3>{
+                    \begin{bibunit}[apalike]
+                        \nocite{Chen-Charpentier2015}
+                        \putbib
+                    \end{bibunit}
+                }
+          \end{graybox}
+       \end{textblock*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{The Bibles:}
+    \only<1>{
+        \begin{bibunit}
+            \nocite{Freidlin1998,Khasminskii}
+            \putbib
+        \end{bibunit}
+    }
+    \only<2>{
+        \begin{bibunit}
+            \nocite{Kloeden1995, Kloeden2017}
+            \putbib
+        \end{bibunit}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Coments about the OCM}
+    \begin{textblock*}{72mm}(15mm, 18mm)
+        \begin{graybox}{About the policies}
+            \begin{itemize}
+                \item
+                 $u = u(t)$, possible improvement
+                \item
+                 $u = (x)$, or $u = u(t,x)$ 
+                \item
+                    uncertinity
+            \end{itemize}
+        Tool: Dynamical Programing-HJB, MDP .
+        \end{graybox}    
+    \end{textblock*}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Towards Stochastic Control}
+    \begin{textblock*}{72mm}(10mm, 10mm)
+        \begin{graybox}{About the policies}
+            \begin{align*}
+                &
+                \min_{u\in \mathcal{U}} \EX{\int_0^T f(t,x,u)}
+                \\
+                s.t.& 
+                    \qquad dx_t = a(t,x,u)dt
+                        + b(t,x,u) dw_t
+            \end{align*}
+        Tools: Dynamic Programing - HJB, MDP, Viscosity Solution,
+        \end{graybox}    
+    \end{textblock*}
+    \only<2>{
+        \begin{textblock*}{60mm}(10mm, 60mm)
+            \begin{bibunit}
+                \nocite{stochastic_control_sis}           
+                \putbib
+            \end{bibunit}
+        \end{textblock*}
+    }
+    \only<3>{
+        \begin{textblock*}{60mm}(10mm, 60mm)
+            \begin{bibunit}
+                \nocite{winner_chaos}           
+                \putbib
+            \end{bibunit}
+        \end{textblock*}
+    }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{The END}
+    \begin{graybox}{Code: \texttt{*.tex, *.py}}
+        \begin{center}
+            \href{
+               https://github.com/SaulDiazInfante/Modelling-Simulation-with-SDE%
+            }%
+            {https://github.com/SaulDiazInfante/Modelling-Simulation-with-SDE}
+        \end{center}
+        \only<2>{
+            \begin{center}
+                \Huge{Gracias!!!}
+            \end{center}
+        }
+    \end{graybox}
+\end{frame}

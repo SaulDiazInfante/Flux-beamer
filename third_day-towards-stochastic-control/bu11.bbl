@@ -1,0 +1,11 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{Diaz-Infante2017a}
+S.~Díaz-Infante and S.~Jerez.
+\newblock The linear steklov method for sdes with non-globally lipschitz
+  coefficients: Strong convergence and simulation.
+\newblock {\em Journal of Computational and Applied Mathematics}, 309:408 --
+  423, 2017.
+
+\end{thebibliography}

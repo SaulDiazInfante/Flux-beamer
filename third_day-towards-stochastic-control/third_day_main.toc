@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Perturbaci\'on con MB}{23}{0}{2}
+\beamer@sectionintoc {3}{Solution properties}{32}{0}{3}
+\beamer@sectionintoc {4}{Trheshold: $ R_0 ^ S := R_0 ^ D -f(\sigma , \cdot ) $ }{35}{0}{4}
+\beamer@sectionintoc {5}{Perspectives and fina comments}{43}{0}{5}

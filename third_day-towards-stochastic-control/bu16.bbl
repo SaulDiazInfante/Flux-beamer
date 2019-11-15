@@ -1,0 +1,17 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{Kloeden2017}
+Peter~E. Kloeden.
+\newblock {\em Random Ordinary Differential Equations and Their Numerical
+  Solution}.
+\newblock Probability Theory and Stochastic Modelling 85. Springer Singapore, 1
+  edition, 2017.
+
+\bibitem{Kloeden1995}
+Eckhard~Platen Peter E.~Kloeden.
+\newblock {\em Numerical solution of stochastic differential equations}.
+\newblock Stochastic Modelling and Applied Probability. Springer, corrected
+  edition, 1995.
+
+\end{thebibliography}

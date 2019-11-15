@@ -1,0 +1,17 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{Acuna-Zegarra2018}
+Manuel~Adrian Acuña-Zegarra and Saúl Díaz-Infante.
+\newblock Stochastic asymptotic analysis of a multi-host model with vector
+  transmission.
+\newblock {\em Physica A: Statistical Mechanics and its Applications}, 510:243
+  -- 260, 2018.
+
+\bibitem{Jerez2018}
+S.~Jerez, S.~Díaz-Infante, and B.~Chen.
+\newblock Fluctuating periodic solutions and moment boundedness of a stochastic
+  model for the bone remodeling process.
+\newblock {\em Mathematical Biosciences}, 299:153 -- 164, 2018.
+
+\end{thebibliography}

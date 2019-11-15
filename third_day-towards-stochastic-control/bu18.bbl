@@ -1,0 +1,10 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{winner_chaos}
+Tony Huschto and Sebastian Sager.
+\newblock Solving stochastic optimal control problems by a {W}iener chaos
+  approach.
+\newblock {\em Vietnam J. Math.}, 42(1):83--113, 2014.
+
+\end{thebibliography}

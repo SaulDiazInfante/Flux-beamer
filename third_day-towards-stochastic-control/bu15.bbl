@@ -1,0 +1,16 @@
+ \newcommand{\noop}[1]{}
+\begin{thebibliography}{1}
+
+\bibitem{Khasminskii}
+Rafail Khasminskii.
+\newblock {\em Stochastic Stability of Differential Equations}.
+\newblock Stochastic Modelling and Applied Probability 66. Springer-Verlag
+  Berlin Heidelberg, 2 edition, 2012.
+
+\bibitem{Freidlin1998}
+Alexander D.~Wentzell Mark I.~Freidlin.
+\newblock {\em Random Perturbations of Dynamical Systems (Grundlehren der
+  mathematischen Wissenschaften)}.
+\newblock Springer, 2nd edition, 1998.
+
+\end{thebibliography}
